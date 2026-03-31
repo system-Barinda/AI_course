@@ -1,19 +1,23 @@
 import { defineConfig } from '@pandacss/dev'
 
 export default defineConfig({
-  // ... your existing config (preflight, include, etc.)
+  // 1. Core Settings
+  preflight: true,
   jsxFramework: 'react',
+  
+  // This MUST be inside the defineConfig object
+  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
+  exclude: [],
 
-  // 1. ADD THE THEME SECTION HERE
+  // 2. Custom Design Tokens
   theme: {
     extend: {
       tokens: {
         colors: {
-          // Define the specific greens from your screenshot
           brand: {
-            dark: { value: '#061311' },    // The near-black background
-            teal: { value: '#0f3a2e' },    // The glowing green accent
-            glass: { value: 'rgba(255, 255, 255, 0.1)' } // For the transparent buttons
+            dark: { value: '#061311' },
+            teal: { value: '#0f3a2e' },
+            glass: { value: 'rgba(255, 255, 255, 0.1)' }
           }
         },
         fonts: {
@@ -23,11 +27,6 @@ export default defineConfig({
     }
   },
 
+  // 3. Output Directory
   outdir: 'styled-system'
 })
-
-// Correct: Square brackets [] make it an array (iterable)
-include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
-
-// Incorrect: This would cause your error
-include: './src/**/*.{js,jsx,ts,tsx}',
