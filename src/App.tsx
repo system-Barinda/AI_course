@@ -1,7 +1,13 @@
-import { css } from '../styled-system/css'
- 
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
-  return <div className={css({ fontSize: '2xl', fontWeight: 'bold' })}>Hello 🐼!</div>
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
- 
-export default App
+
+export default App;
