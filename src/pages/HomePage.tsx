@@ -1,0 +1,111 @@
+import { css } from '../../styled-system/css';
+import { flex, stack, container } from '../../styled-system/patterns';
+
+export default function HomePage() {
+  return (
+    <div className={css({
+      minH: '100vh',
+      bg: 'linear-gradient(135deg, #000000 0%, #0a2a22 50%, #154d3f 100%)',
+      color: 'white',
+      fontFamily: 'sans-serif',
+      position: 'relative',
+      overflow: 'hidden'
+    })}>
+      
+      {/* Navigation */}
+      <nav className={flex({ justify: 'space-between', align: 'center', p: '6', lg: { px: '20' } })}>
+        <div className={flex({ align: 'center', gap: '2' })}>
+          <div className={css({ fontSize: '2xl', fontWeight: 'bold' })}>✦</div>
+          <span className={css({ textTransform: 'uppercase', fontSize: 'xs', letterSpacing: 'widest' })}>Your Logo</span>
+        </div>
+        
+        <div className={flex({ gap: '8', align: 'center', display: { base: 'none', md: 'flex' } })}>
+          <a href="#" className={css({ border: '1px solid white', px: '4', py: '1', borderRadius: 'full', fontSize: 'sm' })}>ABOUT US</a>
+          <a href="#" className={css({ fontSize: 'sm' })}>PRODUCT</a>
+          <a href="#" className={css({ fontSize: 'sm' })}>CONTACT US</a>
+          <button className={css({ bg: 'white', color: 'black', borderRadius: 'full', w: '8', h: '8', display: 'grid', placeItems: 'center' })}>
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className={flex({ 
+        direction: { base: 'column', lg: 'row' },
+        align: 'center',
+        mt: '10',
+        px: { base: '6', lg: '20' }
+      })}>
+        
+        {/* Left Side: Device Mockup */}
+        <div className={css({ flex: '1', position: 'relative' })}>
+          <div className={css({
+            aspectRatio: '16/10',
+            bg: 'gray.800',
+            borderRadius: 'xl',
+            border: '8px solid #222',
+            overflow: 'hidden',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+          })}>
+            <img 
+              src="/ai-abstract.jpg" 
+              alt="AI Visualization" 
+              className={css({ w: 'full', h: 'full', objectFit: 'cover' })} 
+            />
+          </div>
+        </div>
+
+        {/* Right Side: Text & Actions */}
+        <div className={stack({ flex: '1', gap: '8', pl: { lg: '16' }, py: '10' })}>
+          <header>
+            <p className={css({ fontSize: '2xl', fontWeight: '300' })}>Welcome to the</p>
+            <h1 className={css({ fontSize: { base: '5xl', lg: '8xl' }, fontWeight: '800', mt: '-2' })}>
+              AI COURSE
+            </h1>
+            <h2 className={css({ fontSize: '4xl', color: 'gray.300', fontWeight: '300' })}>
+              Learning Program
+            </h2>
+          </header>
+
+          <div className={flex({ gap: '4' })}>
+            <button className={css({ 
+              border: '1px solid rgba(255,255,255,0.3)', 
+              px: '6', py: '2', 
+              borderRadius: 'full',
+              bg: 'rgba(255,255,255,0.05)',
+              _hover: { bg: 'rgba(255,255,255,0.1)' }
+            })}>
+              Artificial Intelligence Presentation
+            </button>
+            <button className={css({ 
+              bg: 'rgba(255,255,255,0.2)', 
+              px: '6', py: '2', 
+              borderRadius: 'full',
+              backdropFilter: 'blur(10px)'
+            })}>
+              Introduction
+            </button>
+          </div>
+
+          {/* Bottom Feature Card */}
+          <div className={flex({ 
+            bg: 'rgba(255,255,255,0.05)', 
+            p: '4', 
+            borderRadius: '3xl', 
+            border: '1px solid rgba(255,255,255,0.1)',
+            align: 'center',
+            gap: '6',
+            maxW: 'md'
+          })}>
+            <div className={css({ w: '120px', h: '60px', borderRadius: 'xl', overflow: 'hidden' })}>
+               <img src="/ai-thumb.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+            </div>
+            <p className={css({ fontSize: 'sm', color: 'gray.300' })}>
+              Discover the goals, structure, and long-term impact of AI integration.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
