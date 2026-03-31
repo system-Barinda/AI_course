@@ -1,18 +1,33 @@
 import { defineConfig } from '@pandacss/dev'
- 
+
 export default defineConfig({
-  // Whether to use css reset
-  preflight: true,
- 
-  // Where to look for your css declarations
-  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
- 
-  // Files to exclude
-  exclude: [],
- 
-  // Generates JSX utilities with options of React, Preact, Qwik, Solid, Vue
+  // ... your existing config (preflight, include, etc.)
   jsxFramework: 'react',
- 
-  // The output directory for your css system
+
+  // 1. ADD THE THEME SECTION HERE
+  theme: {
+    extend: {
+      tokens: {
+        colors: {
+          // Define the specific greens from your screenshot
+          brand: {
+            dark: { value: '#061311' },    // The near-black background
+            teal: { value: '#0f3a2e' },    // The glowing green accent
+            glass: { value: 'rgba(255, 255, 255, 0.1)' } // For the transparent buttons
+          }
+        },
+        fonts: {
+          body: { value: 'var(--font-sans), system-ui, sans-serif' }
+        }
+      }
+    }
+  },
+
   outdir: 'styled-system'
 })
+
+// Correct: Square brackets [] make it an array (iterable)
+include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
+
+// Incorrect: This would cause your error
+include: './src/**/*.{js,jsx,ts,tsx}',
