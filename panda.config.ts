@@ -27,6 +27,29 @@ export default defineConfig({
     }
   },
 
+  //3.custom desing tokens
+
+
+  theme: {
+    extend: {
+      tokens: {
+        colors: {
+          // New tokens for the "Step by Step" layout
+          about: {
+            bg: { value: '#F7F7F7' }, // Soft off-white background
+            text: { value: '#2C3E50' }, // Dark charcoal for main headings
+            card: { value: '#0A2A22' }, // Deep teal/green for the cards
+            subtleCard: { value: '#E1E1E1' }, // Light gray for the left-side sub-card
+            circle: { value: '#F0F0F0' }, // Light gray for the circles
+          },
+        },
+        fonts: {
+          // Assume var(--font-inter) is defined in your main layout
+          body: { value: 'var(--font-inter), system-ui, sans-serif' },
+        },
+      },
+    },
+  },
   // 3. Output Directory
   outdir: 'styled-system'
 })
