@@ -1,6 +1,6 @@
 // src/app/about/page.tsx (or your equivalent route file)
-import { css } from '../../../styled-system/css';
-import { flex, stack, center } from '../../../styled-system/patterns';
+import { css } from '../../styled-system/css';
+import { flex, stack, center } from '../../styled-system/patterns';
 
 export default function AboutPage() {
   return (
@@ -116,6 +116,7 @@ export default function AboutPage() {
 }
 
 // Reuseable Component for the Step Cards (Dark Teal with dots)
+// Reusable Component for the Step Cards (Dark Teal with dots)
 function StepCard({ title, stepText }: { title: string; stepText: string }) {
   return (
     <div className={css({
@@ -144,7 +145,8 @@ function StepCard({ title, stepText }: { title: string; stepText: string }) {
           borderRadius: 'full', 
           border: '1px solid white', 
           display: 'grid', placeItems: 'center', 
-          color: 'white' 
+          color: 'white',
+          cursor: 'pointer'
         })}>+</button>
       </div>
 
@@ -154,14 +156,14 @@ function StepCard({ title, stepText }: { title: string; stepText: string }) {
           <div key={i} className={css({ 
             w: '12', h: '12', 
             borderRadius: 'full', 
-            bg: i >= 9 ? 'white' : 'about.circle', // The last 3 are filled
+            bg: i >= 9 ? 'white' : 'about.circle', 
             transition: 'opacity 0.2s',
             _hover: { opacity: 0.8 }
           })} />
         ))}
       </div>
 
-      {/* Footer (Action Button) */}
+      {/* Footer (Action Button) - FIXED THE TAGS HERE */}
       <button className={center({ 
         w: 'full',
         border: '1px solid rgba(255,255,255,0.3)',
@@ -170,10 +172,11 @@ function StepCard({ title, stepText }: { title: string; stepText: string }) {
         borderRadius: 'full',
         mt: 'auto',
         fontSize: 'sm',
+        cursor: 'pointer',
         _hover: { bg: 'rgba(255,255,255,0.05)' }
       })}>
         {stepText}
-      </div>
+      </button> 
     </div>
   );
 }
