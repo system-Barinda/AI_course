@@ -1,5 +1,5 @@
-import { css } from '../styled-system/css';
-import { flex, stack, center } from '../styled-system/patterns';
+import { css } from '../../../styled-system/css';
+import { flex, stack, center } from '../../../styled-system/patterns';
 
 export default function LearnToMakeSection() {
   return (

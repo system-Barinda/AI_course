@@ -1,9 +1,10 @@
 // src/app/about/page.tsx (or your equivalent route file)
 import { css } from '../../styled-system/css';
 import { flex, stack, center } from '../../styled-system/patterns';
+import LearnToMakeSection from "../components/about/LearnToMakeSection"
 
 export default function AboutPage() {
-  return (
+  return (<>
     <div className={css({ minH: '100vh', bg: 'about.bg', fontFamily: 'body' })}>
       
       {/* 1. Universal Header (as seen in image_1.png) */}
@@ -112,6 +113,8 @@ export default function AboutPage() {
         </div>
       </main>
     </div>
+    <LearnToMakeSection />
+    </>
   );
 }
 
