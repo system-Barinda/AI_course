@@ -4,6 +4,7 @@ import LearnToMakeSection from "../components/about/LearnToMakeSection"
 import LearnWithExpertsSection from "../components/about/LearnWithExpertsSection"
 import DataHighlightsDashboard from "../components/about/DataHighlightsDashboard"
 import LevelAiLearning from '../components/about/LevelAiLearning';
+import danily from "../../public/danily.jpg"
 
 export default function AboutPage() {
   return (<>
@@ -75,17 +76,27 @@ export default function AboutPage() {
           minH: '400px',
           boxShadow: 'xl'
         })}>
-          <div className={css({ 
-            w: 'full', 
-            h: 'full', 
-            bg: 'linear-gradient(to bottom, #1a202c, #2d3748)',
-            display: 'flex',
-            alignItems: 'center',
-            justify: 'center',
-            color: 'white'
-          })}>
-            [Robot Hand Image]
-          </div>
+          <div
+                className={css({
+                  w: "full",
+                  h: "full",
+                  bg: "linear-gradient(to bottom, #1a202c, #2d3748)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  overflow: "hidden", // important
+       })}
+       >
+            <img
+              src={danily}
+              alt="image"
+              className={css({
+                width: "100%",
+                height: "100%",
+                objectFit: "contain", // ✅ correct property
+              })}
+            />
+           </ div>
         </div>
 
         <StepCard title="Headline" stepNumber="2" />
