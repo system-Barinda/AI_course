@@ -1,7 +1,8 @@
 // src/app/about/page.tsx (or your equivalent route file)
 import { css } from '../../styled-system/css';
 import { flex, stack, center } from '../../styled-system/patterns';
-import LearnToMakeSection from "../components/about/LearnToMakeSection"
+import LearnToMakeSection from "../../components/about/LearnToMakeSection"
+import FeatureCardsSection from "../../components/about/FeatureCardsSection"
 
 export default function AboutPage() {
   return (<>
@@ -114,6 +115,7 @@ export default function AboutPage() {
       </main>
     </div>
     <LearnToMakeSection />
+    <FeatureCardsSection />
     </>
   );
 }
