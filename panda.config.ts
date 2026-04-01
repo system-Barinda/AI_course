@@ -70,6 +70,30 @@ export default defineConfig({
     },
   },
   
+
+
+  theme: {
+    extend: {
+      tokens: {
+        colors: {
+          expert: {
+            bgGradient: { value: 'linear-gradient(135deg, #f8f9fa 0%, #e0e6ed 100%)' }, // Light, smooth background gradient
+            textCharcoal: { value: '#1a202c' }, // Dark charcoal for headings and body text
+            aiChat: {
+              gradient: { value: 'linear-gradient(135deg, #103a2e 0%, #061311 100%)' }, // Dark green for AI panel
+              userBubble: { value: 'rgba(255, 255, 255, 0.1)' }, // Transparent light white bubble
+              userText: { value: '#cbd5f5' } // Pale blue-white text
+            },
+            input: { value: '#2d3748' }, // Dark input field
+          },
+        },
+        fonts: {
+          // Assume var(--font-inter) is defined globally
+          body: { value: 'var(--font-inter), system-ui, sans-serif' },
+        },
+      },
+    },
+  },
   // 3. Output Directory
   outdir: 'styled-system'
 })
