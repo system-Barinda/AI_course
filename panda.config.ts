@@ -50,6 +50,26 @@ export default defineConfig({
       },
     },
   },
+
+  theme: {
+    extend: {
+      tokens: {
+        colors: {
+          learn: {
+            bg: { value: '#FFFFFF' }, // Clean white background for the text section
+            title: { value: '#2C3E50' }, // Dark charcoal for the "Learn to Make" title
+            card: { value: '#10352A' }, // Rich green base for the dark cards
+            circle: { value: '#E1E1E1' }, // Light gray for the dots
+          },
+        },
+        fonts: {
+          // Assume var(--font-inter) is defined globally
+          body: { value: 'var(--font-inter), system-ui, sans-serif' },
+        },
+      },
+    },
+  },
+  
   // 3. Output Directory
   outdir: 'styled-system'
 })
