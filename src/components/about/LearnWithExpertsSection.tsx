@@ -1,14 +1,16 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
 import pcperson from "../../../public/pcperson.jpg"
+import person2 from "../../../public/person2.jpg"
+import person1 from "../../../public/person1.jpg"
 
 export default function LearnWithExpertsSection() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: 'expert.bgGradient', 
+      bg: 'linear-gradient(220.4deg, #02241c 60%, #0e4235 50%)', 
       fontFamily: 'body',
-      color: 'expert.textCharcoal',
+      color: '#a8a4a5',
       position: 'relative',
       overflow: 'hidden',
     })}>
@@ -53,7 +55,7 @@ export default function LearnWithExpertsSection() {
           {/* Chat Bubble 1: AI (Left-aligned, Avatar + White Bubble) */}
           <div className={flex({ gap: '4', align: 'flex-start' })}>
             <div className={css({ w: '12', h: '12', bg: 'white', borderRadius: 'full', overflow: 'hidden' })}>
-              <img src="/mock-avatar-ai.png" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="AI Avatar" />
+              <img src={person2} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="AI Avatar" />
             </div>
             <div className={stack({ 
               bg: 'white', 
@@ -78,14 +80,14 @@ export default function LearnWithExpertsSection() {
               <p className={css({ fontSize: 'xs' })}>Tell me about it</p>
             </div>
             <div className={css({ w: '10', h: '10', bg: 'expert.input', borderRadius: 'full', overflow: 'hidden', mb: '1' })}>
-               <img src="/mock-avatar-user.png" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="User Avatar" />
+               <img src={person1} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="User Avatar" />
             </div>
           </div>
 
           {/* Chat Bubble 3: Subheadline (Complex: Left-aligned, Large Bubble + Text) */}
           <div className={flex({ gap: '4', align: 'flex-start' })}>
             <div className={css({ w: '12', h: '12', bg: 'white', borderRadius: 'full', overflow: 'hidden' })}>
-              <img src="/mock-avatar-ai.png" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="AI Avatar" />
+              <img src={person2} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} alt="AI Avatar" />
             </div>
             <div className={stack({ 
               bg: 'white', 
@@ -135,7 +137,7 @@ export default function LearnWithExpertsSection() {
             <h1 className={css({ fontSize: { base: '4xl', lg: '6xl' }, fontWeight: 'bold' })}>
               Learn with Experts
             </h1>
-            <p className={css({ fontSize: 'sm', maxW: '2xl', color: 'expert.textCharcoal/80' })}>
+            <p className={css({ fontSize: 'sm', maxW: '2xl', color: '#a8a4a5' })}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
