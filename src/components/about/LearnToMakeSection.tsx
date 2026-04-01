@@ -1,5 +1,6 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
+import robot from "../../../public/robot.png"
 
 export default function LearnToMakeSection() {
   return (
@@ -114,7 +115,7 @@ export default function LearnToMakeSection() {
             borderRadius: 'full'
           })} />
 
-          <img src="/robot-phone-bg.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+          <img src={robot} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
         </div>
 
       </main>
