@@ -33,36 +33,13 @@ export default function LevelAiLearning() {
         pointerEvents: 'none',
       })} />
 
-      {/* HEADER SECTION */}
-      <header className={flex({
-        justify: 'space-between',
-        align: 'center',
-        px: { base: '6', lg: '16' },
-        py: '8',
-        position: 'relative',
-        zIndex: 1
-      })}>
-        <div className={flex({ align: 'center', gap: '2' })}>
-          <div className={css({ fontSize: '2xl', color: '#000' })}>✦</div>
-          <span className={css({ fontSize: 'xs', fontWeight: 'bold', letterSpacing: 'widest' })}>
-            YOUR LOGO
-          </span>
-        </div>
-
-        <div className={flex({ gap: '8', align: 'center', display: { base: 'none', md: 'flex' } })}>
-          <span className={css({ fontSize: '10px', border: '1px solid #000', px: '4', py: '1.5', borderRadius: 'full' })}>ABOUT US</span>
-          <span className={css({ fontSize: '10px', fontWeight: '600' })}>PRODUCT</span>
-          <span className={css({ fontSize: '10px', fontWeight: '600' })}>CONTACT US</span>
-          <div className={center({ w: '10', h: '10', bg: 'black', color: 'white', borderRadius: 'full', fontSize: 'xl' })}>☰</div>
-        </div>
-      </header>
-
       {/* MAIN CONTENT */}
       <main className={css({
         px: { base: '6', lg: '16' },
         py: '8',
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        height:'60px'
       })}>
         <div className={flex({
           direction: { base: 'column', lg: 'row' },
@@ -80,6 +57,7 @@ export default function LevelAiLearning() {
             flex: '1.1',
             width: 'full',
             boxShadow: '0 40px 100px -20px rgba(0,0,0,0.4)',
+            height:'100vh'
           })}>
             <h2 className={css({
               fontSize: { base: '40px', lg: '56px' },
