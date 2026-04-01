@@ -5,154 +5,123 @@ export default function LearnToMakeSection() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: 'learn.bg',
+      bg: 'white', // Bright white background as seen in image
       fontFamily: 'body',
       position: 'relative',
       overflow: 'hidden',
     })}>
       
-      {/* Universal Header (No menu, just Logo as requested) */}
-      <header className={flex({ justify: 'flex-start', align: 'center', p: '6', lg: { px: '20' } })}>
+      {/* 1. Header: Logo Left, Links Right (Matching Screenshot) */}
+      <header className={flex({ justify: 'space-between', align: 'center', p: '6', lg: { px: '20' } })}>
         <div className={flex({ align: 'center', gap: '2' })}>
-          <div className={css({ color: 'learn.title', fontSize: '2xl' })}>✦</div>
-          <span className={css({ textTransform: 'uppercase', color: 'learn.title', fontSize: 'xs', letterSpacing: 'widest' })}>Your Logo</span>
+          <div className={css({ color: 'black', fontSize: '2xl' })}>✦</div>
+          <span className={css({ textTransform: 'uppercase', color: 'black', fontSize: 'xs', fontWeight: 'bold' })}>Your Logo</span>
+        </div>
+        <div className={flex({ gap: '8', align: 'center' })}>
+           <span className={css({ fontSize: 'xs', border: '1px solid black', px: '3', py: '1', borderRadius: 'full' })}>ABOUT US</span>
+           <span className={css({ fontSize: 'xs' })}>PRODUCT</span>
+           <span className={css({ fontSize: 'xs' })}>CONTACT US</span>
+           <div className={center({ w: '8', h: '8', bg: 'black', color: 'white', borderRadius: 'full' })}>☰</div>
         </div>
       </header>
 
-      {/* Main Responsive Grid/Layout Container */}
+      {/* 2. Main Layout Container */}
       <main className={css({
-        position: 'relative', // Context for absolute positioned cards
-        p: { base: '6', lg: '12' },
-        pt: '0',
-        color: 'learn.title',
-        display: { base: 'stack', lg: 'grid' },
-        gridTemplateColumns: { lg: '1fr 1.5fr' }, // Give more room to the image column
-        gap: '12',
-        alignItems: 'center',
+        display: 'grid',
+        gridTemplateColumns: { base: '1fr', lg: '1fr 1fr 1.2fr' }, // Three-column feel from image
+        gap: '8',
+        px: { base: '6', lg: '20' },
+        alignItems: 'start',
       })}>
         
-        {/* Left Section: Text Content */}
-        <div className={stack({ gap: '8', pr: { lg: '10' } })}>
-          <h1 className={css({ fontSize: { base: '4xl', lg: '6xl' }, fontWeight: 'bold', lineHeight: 'tight' })}>
+        {/* LEFT COLUMN: Title and Big Card */}
+        <div className={stack({ gap: '10' })}>
+          <h1 className={css({ fontSize: { base: '4xl', lg: '7xl' }, fontWeight: 'bold', color: '#1a365d', lineHeight: '1.1' })}>
             Learn to Make Machines Think
           </h1>
-          
-          {/* Subtle light background sub-card on left */}
-          <div className={stack({ 
-            bg: 'learn.circle', // Reuse gray dot color for subtle card bg
-            p: '5', 
-            borderRadius: '2xl', 
-            color: 'learn.title/80',
-            border: '1px solid token(colors.gray.200)',
-          })}>
-            <p className={css({ fontSize: 'md', fontWeight: 'semibold' })}>Lorem ipsum dolor sit amet.</p>
-            <p className={css({ fontSize: 'xs', maxW: '2xl' })}>
-              Unlock the core tenets of machine learning. Focus on practical projects, robust theory,
-              and standard benchmarks. Mastery is a process.
-            </p>
-          </div>
-        </div>
 
-        {/* Right Section: Large Image and Floaters (Exactly as image_2.png) */}
-        <div className={css({ 
-          position: 'relative', 
-          aspectRatio: { base: '16/10', md: 'auto' }, // Responsive aspect ratio
-          minH: { lg: '80vh' },
-          bg: 'gray.800', // Mock main background image
-          borderRadius: '3xl',
-          overflow: { base: 'visible', md: 'visible' }, // Important: allow cards to overlap
-          boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-        })}>
-          {/* Main Mock Image Container */}
-          <div className={css({
-            w: 'full',
-            h: 'full',
-            bg: 'gray.800', // Actual background image placeholder
+          {/* Green "Smart Algorithms" Card */}
+          <div className={stack({
+            bg: 'linear-gradient(to bottom right, #103a2e, #061311)',
+            p: '8',
             borderRadius: '3xl',
-            overflow: 'hidden'
-          })}>
-             <img src="/mock-ai-laptop.jpg" alt="A person working on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
-          </div>
-
-          {/* Floating Card: "Smart Algorithms" */}
-          <div className={css({
-            position: 'absolute',
-            // Relative coordinates from top-left of the image container on Desktop
-            top: '-60px', 
-            left: '-100px', 
-            display: { base: 'none', lg: 'flex' }, // Hide complex overlap on mobile
-
-            // Content Styling (exactly as in image)
-            width: '380px',
-            bg: 'linear-gradient(135deg, #10352A 0%, #0A2A22 100%)',
             color: 'white',
-            borderRadius: '2xl',
-            p: '6',
-            flexDirection: 'column',
             gap: '6',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+            boxShadow: 'xl'
           })}>
-            {/* Card Header */}
             <div className={flex({ justify: 'space-between', align: 'center' })}>
-              <h3 className={css({ fontSize: '2xl', fontWeight: 'semibold' })}>Smart Algorithms</h3>
-              <button className={center({ 
-                w: '8', h: '8', 
-                borderRadius: 'full', 
-                border: '1px solid white', 
-                color: 'white', 
-                fontSize: 'xl' 
-              })}>+</button>
+              <span className={css({ fontSize: '2xl', fontWeight: 'light', opacity: 0.8 })}>Smart Algorithms</span>
+              {/* FIXED: Changed </button> to </div> and removed stray "Great" text */}
+              <div className={center({ w: '10', h: '10', border: '1px solid white', borderRadius: 'full', fontSize: '2xl', cursor: 'pointer' })}>+</div>
             </div>
-
-            {/* Grid of Dots (Centerpiece) */}
-            <div className={flex({ gap: '3', wrap: 'wrap', flex: '1', justify: 'center' })}>
+            
+            {/* The Dots Grid */}
+            <div className={flex({ gap: '3', wrap: 'wrap' })}>
               {Array.from({ length: 9 }).map((_, i) => (
                 <div key={i} className={css({ 
-                  w: '16', h: '16', 
-                  borderRadius: 'full', 
-                  bg: i >= 6 ? 'white' : 'learn.circle' // Bottom row is white
+                  w: '20', h: '20', 
+                  borderRadius: 'xl', 
+                  bg: i > 5 ? 'white/90' : 'white/20', // Bottom row highlighted white
+                  backdropFilter: 'blur(4px)'
                 })} />
               ))}
             </div>
 
-            {/* Card Footer */}
-            <div className={flex({ justify: 'flex-start', align: 'flex-end', gap: '3', mt: 'auto' })}>
-              <span className={css({ fontSize: '4xl', fontWeight: 'bold', color: 'white' })}>$567</span>
-              <p className={css({ fontSize: '10px', color: 'white/60', pb: '1px' })}>Lorem ipsum dolor sit amet.</p>
+            <div className={flex({ justify: 'space-between', align: 'flex-end', mt: '4' })}>
+              <span className={css({ fontSize: '4xl', fontWeight: 'bold' })}>$567</span>
+              <p className={css({ fontSize: '10px', textAlign: 'right', opacity: 0.6 })}>Lorem ipsum<br/>dolor sit amet</p>
             </div>
           </div>
+        </div>
 
-          {/* Floating Card: Small Details Card */}
-          <div className={css({
-            position: 'absolute',
-            // Coordinates from top-right corner of the image container
-            bottom: '-40px',
-            right: { base: '-20px', lg: '100px' }, // Moves further in on Desktop
-            
-            // Content Styling
-            width: '280px',
-            bg: 'linear-gradient(135deg, #10352A 0%, #0A2A22 100%)',
-            p: '5',
-            color: 'white',
-            borderRadius: '2xl',
-            boxShadow: '0 15px 30px rgba(0,0,0,0.2)'
+        {/* MIDDLE COLUMN: Small Floaties */}
+        <div className={stack({ gap: '6', pt: '10' })}>
+          {/* Top Robot Image (Square-ish) */}
+          <div className={css({ 
+            width: 'full', 
+            aspectRatio: '1/1', 
+            borderRadius: '3xl', 
+            overflow: 'hidden',
+            bg: '#ccc' 
           })}>
-            <div className={flex({ 
-              bg: 'learn.circle/10', 
-              p: '2', 
-              borderRadius: 'full', 
-              fontSize: 'xs', 
-              display: 'inline-flex',
-              mb: '3',
-              border: '1px solid white/30',
-            })}>
-              Your Data <span className={css({ ml: '1' })}>☰</span>
+            <img src="/robot-portrait.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+          </div>
+
+          {/* Bottom Green "Your Data" Card */}
+          <div className={stack({
+            bg: 'linear-gradient(to bottom right, #103a2e, #061311)',
+            p: '5',
+            borderRadius: '2xl',
+            color: 'white',
+            gap: '3'
+          })}>
+            <div className={flex({ bg: 'white/10', border: '1px solid white/20', px: '3', py: '1', borderRadius: 'full', align: 'center', justify: 'space-between', fontSize: 'xs', w: 'fit-content' })}>
+              Your Data <span className={css({ ml: '4' })}>☰</span>
             </div>
-            <p className={css({ fontSize: 'xs', color: 'white/80' })}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
+            <p className={css({ fontSize: 'xs', opacity: 0.7, lineHeight: '1.4' })}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
             </p>
           </div>
         </div>
+
+        {/* RIGHT COLUMN: The Phone Display */}
+        <div className={css({
+          height: '80vh',
+          bg: '#000',
+          borderRadius: '40px',
+          border: '8px solid #222',
+          overflow: 'hidden',
+          position: 'relative'
+        })}>
+          {/* Top Notch/Dynamic Island */}
+          <div className={css({ position: 'absolute', top: '4', left: '50%', transform: 'translateX(-50%)', w: '80px', h: '25px', bg: '#111', borderRadius: 'full' })} />
+          
+          <img 
+            src="/robot-phone-bg.jpg" 
+            className={css({ w: 'full', h: 'full', objectFit: 'cover', opacity: 0.8 })} 
+          />
+        </div>
+
       </main>
     </div>
   );
