@@ -7,7 +7,7 @@ export default function LearnToMakeSection() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: '#f8fafc',
+      bg: 'linear-gradient(165deg, #000000 10%, #034131 90%)',
       fontFamily: 'body',
     })}>
 
@@ -25,7 +25,7 @@ export default function LearnToMakeSection() {
           <h1 className={css({
             fontSize: { base: '4xl', lg: '6xl' },
             fontWeight: 'bold',
-            color: '#334155',
+            color: '#8f949a',
             lineHeight: '1.1'
           })}>
             Learn to Make
