@@ -1,5 +1,6 @@
 import { css } from '../../styled-system/css';
 import { flex, stack, container } from '../../styled-system/patterns';
+import image1 from "../../public/im1.png"
 
 export default function HomePage() {
   return (
@@ -49,7 +50,7 @@ export default function HomePage() {
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
           })}>
             <img 
-              src="/ai-abstract.jpg" 
+              src={image1} 
               alt="AI Visualization" 
               className={css({ w: 'full', h: 'full', objectFit: 'cover' })} 
             />
@@ -60,7 +61,7 @@ export default function HomePage() {
         <div className={stack({ flex: '1', gap: '8', pl: { lg: '16' }, py: '10' })}>
           <header>
             <p className={css({ fontSize: '2xl', fontWeight: '300' })}>Welcome to the</p>
-            <h1 className={css({ fontSize: { base: '5xl', lg: '8xl' }, fontWeight: '800', mt: '-2' })}>
+            <h1 className={css({ fontSize: { base: '2xl', lg: '3xl' }, fontWeight: '800', mt: '-2' })}>
               AI COURSE
             </h1>
             <h2 className={css({ fontSize: '4xl', color: 'gray.300', fontWeight: '300' })}>
@@ -99,7 +100,7 @@ export default function HomePage() {
             maxW: 'md'
           })}>
             <div className={css({ w: '120px', h: '60px', borderRadius: 'xl', overflow: 'hidden' })}>
-               <img src="/ai-thumb.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+               <img src={image1} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
             </div>
             <p className={css({ fontSize: 'sm', color: 'gray.300' })}>
               Discover the goals, structure, and long-term impact of AI integration.
