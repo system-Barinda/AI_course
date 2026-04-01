@@ -1,6 +1,6 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
-export function FeatureCardsSection() {
+export default function FeatureCardsSection() {
   return (
     <div className={css({
       px: { base: '6', md: '10' },
