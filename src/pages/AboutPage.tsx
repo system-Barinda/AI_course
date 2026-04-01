@@ -76,17 +76,22 @@ export default function AboutPage() {
           minH: '400px',
           boxShadow: 'xl'
         })}>
-          <div
-                className={css({
-                  w: "full",
-                  h: "full",
-                  bg: "linear-gradient(to bottom, #1a202c, #2d3748)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  overflow: "hidden", // important
-       })}
-       >
+       <div
+  className={css({
+    w: "full",
+    h: "full",
+    backgroundImage: `
+      linear-gradient(to bottom, rgba(26,32,44,0.7), rgba(45,55,72,0.9)),
+      url(${danily})
+    `,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  })}
+>
             <img
               src={danily}
               alt="image"
