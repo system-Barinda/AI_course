@@ -21,35 +21,8 @@ export default function LearnWithExpertsSection() {
         alignItems: { base: 'center', lg: 'stretch' }
       })}>
         
-        {/* Left Side: Text and Laptop Mockup */}
-        <div className={stack({ flex: '1.2', gap: '8', pr: { lg: '10' } })}>
-          <div className={stack({ gap: '4' })}>
-            <h1 className={css({ fontSize: { base: '4xl', lg: '6xl' }, fontWeight: 'bold' })}>
-              Learn with Experts
-            </h1>
-            <p className={css({ fontSize: 'sm', maxW: '2xl', color: 'expert.textCharcoal/80' })}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
 
-          {/* Large Laptop Mockup */}
-          <div className={css({ 
-            width: '100%', 
-            bg: 'expert.input', // Mock dark color for the device frame
-            aspectRatio: '16/10',
-            borderRadius: '2xl',
-            overflow: 'hidden',
-            boxShadow: 'xl',
-            border: '8px solid #333' // Added a slight bezel for realism
-          })}>
-            {/* The internal image placeholder */}
-            <div className={css({ w: 'full', h: 'full', bg: '#ccc', display: 'flex', alignItems: 'center', justifyContent: 'center' })}>
-              <img src="/mock-laptop-interior.jpg" alt="A person working on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
-            </div>
-          </div>
-        </div>
-
-        {/* Right Side: The Complex "AI: COURSEME" Chat Panel */}
+        {/* left Side: The Complex "AI: COURSEME" Chat Panel */}
         <div className={flex({ 
           flex: '1',
           bg: 'expert.aiChat.gradient', // Applied the dark green gradient
@@ -155,6 +128,37 @@ export default function LearnWithExpertsSection() {
             <div className={center({ w: '6', h: '6', color: 'expert.aiChat.userText' })}>🎙️</div>
           </div>
         </div>
+         {/* Left Side: Text and Laptop Mockup */}
+      <div className={stack({ flex: '1.2', gap: '8', pr: { lg: '10' } })}>
+          <div className={stack({ gap: '4' })}>
+            <h1 className={css({ fontSize: { base: '4xl', lg: '6xl' }, fontWeight: 'bold' })}>
+              Learn with Experts
+            </h1>
+            <p className={css({ fontSize: 'sm', maxW: '2xl', color: 'expert.textCharcoal/80' })}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+
+          {/* Large Laptop Mockup */}
+          <div className={css({ 
+            width: '100%', 
+            bg: 'expert.input', // Mock dark color for the device frame
+            aspectRatio: '16/10',
+            borderRadius: '2xl',
+            overflow: 'hidden',
+            boxShadow: 'xl',
+            border: '8px solid #333' // Added a slight bezel for realism
+          })}>
+            {/* The internal image placeholder */}
+            <div className={css({ w: 'full', h: 'full', bg: '#ccc', display: 'flex', alignItems: 'center', justifyContent: 'center' })}>
+              <img src="/mock-laptop-interior.jpg" alt="A person working on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
+            </div>
+          </div>
+        </div>
+
+
+
+
       </main>
     </div>
   );
