@@ -1,8 +1,9 @@
 import { css } from '../../styled-system/css';
 import { flex, stack, center } from '../../styled-system/patterns';
 import LearnToMakeSection from "../components/about/LearnToMakeSection"
+import LearnWithExpertsSection from "../components/about/LearnWithExpertsSection"
 
-export default function FeatureCardsSection() {
+export default function AboutPage() {
   return (<>
     <div className={css({
       px: { base: '6', lg: '20' },
@@ -89,6 +90,7 @@ export default function FeatureCardsSection() {
       </div>
     </div>
     <LearnToMakeSection />
+    <LearnWithExpertsSection  />
  </> );
 }
 
