@@ -1,11 +1,12 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
+import pcperson from "../../../public/pcperson.jpg"
 
 export default function LearnWithExpertsSection() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: 'expert.bgGradient', // Applied the new light gradient background
+      bg: 'expert.bgGradient', 
       fontFamily: 'body',
       color: 'expert.textCharcoal',
       position: 'relative',
@@ -151,7 +152,7 @@ export default function LearnWithExpertsSection() {
           })}>
             {/* The internal image placeholder */}
             <div className={css({ w: 'full', h: 'full', bg: '#ccc', display: 'flex', alignItems: 'center', justifyContent: 'center' })}>
-              <img src="/mock-laptop-interior.jpg" alt="A person working on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
+              <img src={pcperson} alt="A person working on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
             </div>
           </div>
         </div>
