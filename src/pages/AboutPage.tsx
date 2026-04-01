@@ -11,7 +11,7 @@ export default function AboutPage() {
     <div className={css({
       px: { base: '6', lg: '20' },
       py: '20',
-      bg: 'white',
+      bg: 'linear-gradient(142deg, #01130f 60%, #0e4235 50%)',
       display: 'grid',
       gridTemplateColumns: { base: '1fr', lg: '1fr 2fr' },
       gap: '12',
@@ -24,15 +24,15 @@ export default function AboutPage() {
           <h2 className={css({ 
             fontSize: '5xl', 
             fontWeight: 'bold', 
-            color: '#2d4a53', 
+            color: '#c0d2d8', 
             lineHeight: 'tight' 
           })}>
             Step by Step <br /> AI Mastery
           </h2>
-          <p className={css({ color: '#4a5568', fontSize: 'sm', maxW: 'md' })}>
+          <p className={css({ color: '#9fa8b8', fontSize: 'sm', maxW: 'md' })}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <p className={css({ color: '#4a5568', fontSize: 'sm', maxW: 'md' })}>
+          <p className={css({ color: '#9fa8b8', fontSize: 'sm', maxW: 'md' })}>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </div>
