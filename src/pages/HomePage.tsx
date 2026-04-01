@@ -20,7 +20,8 @@ export default function HomePage() {
         </div>
         
         <div className={flex({ gap: '8', align: 'center', display: { base: 'none', md: 'flex' } })}>
-          <a href="#" className={css({ border: '1px solid white', px: '4', py: '1', borderRadius: 'full', fontSize: 'sm' })}>ABOUT US</a>
+          <a href="#" className={css({ border: '1px solid white', px: '4', py: '1', borderRadius: 'full', fontSize: 'sm' })}>home</a>
+          <a href="#" className={css({ fontSize: 'sm' })}>About us</a>
           <a href="#" className={css({ fontSize: 'sm' })}>PRODUCT</a>
           <a href="#" className={css({ fontSize: 'sm' })}>CONTACT US</a>
           <button className={css({ bg: 'white', color: 'black', borderRadius: 'full', w: '8', h: '8', display: 'grid', placeItems: 'center' })}>

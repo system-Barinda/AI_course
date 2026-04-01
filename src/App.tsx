@@ -8,7 +8,7 @@ function App() {
     <>
     
       
-      <AboutPage />
+      <AboutPage/>
     </>
   );
 }
