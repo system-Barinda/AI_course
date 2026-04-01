@@ -3,6 +3,7 @@ import { flex, stack, center } from '../../styled-system/patterns';
 import LearnToMakeSection from "../components/about/LearnToMakeSection"
 import LearnWithExpertsSection from "../components/about/LearnWithExpertsSection"
 import DataHighlightsDashboard from "../components/about/DataHighlightsDashboard"
+import LevelAiLearning from '../components/about/LevelAiLearning';
 
 export default function AboutPage() {
   return (<>
@@ -93,6 +94,7 @@ export default function AboutPage() {
     <LearnToMakeSection />
     <LearnWithExpertsSection  />
     <DataHighlightsDashboard  />
+    <LevelAiLearning />
  </> );
 }
 
