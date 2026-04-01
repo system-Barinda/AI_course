@@ -1,15 +1,16 @@
-
-import AboutPage from "./pages/AboutPage";
-import HomePage from "./pages/HomePage";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import About from "./pages/AboutPage";
+import Home from "./pages/HomePage";
 
 
 function App() {
   return (
-  
-    
-      
-      <HomePage />
-    
+  <BrowserRouter>
+  <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
