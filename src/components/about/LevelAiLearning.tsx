@@ -11,157 +11,195 @@ export default function LevelAiLearning() {
   ];
 
   return (
-    <main className={css({
-      px: { base: '6', lg: '16' },
-      py: '12',
+    <div className={css({
+      minH: '100vh',
+      bg: '#e2e8f0', // Light grey base to match the screenshot background
+      fontFamily: 'body',
+      color: '#1a202c',
+      position: 'relative',
+      overflow: 'hidden',
     })}>
-      <div className={flex({
-        direction: { base: 'column', lg: 'row' },
-        gap: '16',
-        align: 'center'
+      
+      {/* Background Swirl/Circle Decoration (As seen in the screenshot) */}
+      <div className={css({
+        position: 'absolute',
+        top: '10%',
+        right: '-5%',
+        width: '600px',
+        height: '600px',
+        borderRadius: 'full',
+        border: '60px solid rgba(0,0,0,0.03)',
+        zIndex: 0,
+        pointerEvents: 'none',
+      })} />
+
+      {/* HEADER SECTION */}
+      <header className={flex({
+        justify: 'space-between',
+        align: 'center',
+        px: { base: '6', lg: '16' },
+        py: '8',
+        position: 'relative',
+        zIndex: 1
       })}>
-
-        {/* LEFT CARD */}
-        <div className={stack({
-          bg: 'linear-gradient(135deg, #0f3d3e, #134e4a)',
-          color: 'white',
-          p: { base: '6', md: '10' },
-          borderRadius: '32px',
-          gap: '6',
-          flex: 1,
-          width: 'full',
-          boxShadow: '0 25px 60px rgba(0,0,0,0.25)',
-        })}>
-
-          <h2 className={css({
-            fontSize: '36px',
-            fontWeight: 'bold',
-            lineHeight: '1.2'
-          })}>
-            Levels of AI Learning
-          </h2>
-
-          {/* SEARCH */}
-          <div className={flex({
-            bg: 'rgba(255,255,255,0.15)',
-            borderRadius: '999px',
-            px: '5',
-            py: '3',
-            align: 'center',
-            backdropFilter: 'blur(6px)'
-          })}>
-            <span className={css({ opacity: 0.7 })}>🔍</span>
-            <input
-              placeholder="Search Here"
-              className={css({
-                ml: '3',
-                bg: 'transparent',
-                border: 'none',
-                outline: 'none',
-                color: 'white',
-                fontSize: 'sm',
-                flex: 1,
-                _placeholder: { color: 'white/50' }
-              })}
-            />
-          </div>
-
-          <p className={css({
-            fontSize: '13px',
-            opacity: 0.85,
-            lineHeight: '1.7'
-          })}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          {/* IMAGE */}
-          <div className={css({
-            borderRadius: '20px',
-            overflow: 'hidden',
-            mt: '2'
-          })}>
-            <img
-              src="/mock-ai-visual.jpg"
-              alt="AI"
-              className={css({
-                w: 'full',
-                h: '200px',
-                objectFit: 'cover'
-              })}
-            />
-          </div>
+        <div className={flex({ align: 'center', gap: '2' })}>
+          <div className={css({ fontSize: '2xl', color: '#000' })}>✦</div>
+          <span className={css({ fontSize: 'xs', fontWeight: 'bold', letterSpacing: 'widest' })}>
+            YOUR LOGO
+          </span>
         </div>
 
-        {/* RIGHT CHART */}
+        <div className={flex({ gap: '8', align: 'center', display: { base: 'none', md: 'flex' } })}>
+          <span className={css({ fontSize: '10px', border: '1px solid #000', px: '4', py: '1.5', borderRadius: 'full' })}>ABOUT US</span>
+          <span className={css({ fontSize: '10px', fontWeight: '600' })}>PRODUCT</span>
+          <span className={css({ fontSize: '10px', fontWeight: '600' })}>CONTACT US</span>
+          <div className={center({ w: '10', h: '10', bg: 'black', color: 'white', borderRadius: 'full', fontSize: 'xl' })}>☰</div>
+        </div>
+      </header>
+
+      {/* MAIN CONTENT */}
+      <main className={css({
+        px: { base: '6', lg: '16' },
+        py: '8',
+        position: 'relative',
+        zIndex: 1
+      })}>
         <div className={flex({
-          flex: 1,
-          width: 'full',
-          justify: 'center',
-          align: 'flex-end',
-          h: '420px',
-          position: 'relative'
+          direction: { base: 'column', lg: 'row' },
+          gap: { base: '12', lg: '24' },
+          align: 'center'
         })}>
 
-          {/* Background curve effect */}
-          <div className={css({
-            position: 'absolute',
-            top: '-80px',
-            right: '-50px',
-            w: '300px',
-            h: '300px',
-            borderRadius: '50%',
-            bg: 'rgba(30, 10, 10, 0.05)'
-          })} />
-
-          <div className={flex({
-            align: 'flex-end',
-            gap: '6',
-            w: 'full',
-            maxW: '500px'
+          {/* LEFT DARK CARD (AI LEARNING) */}
+          <div className={stack({
+            background: 'linear-gradient(135deg, #103a2e 0%, #061311 100%)', // Deep AI green-black gradient
+            color: 'white',
+            p: { base: '8', md: '12' },
+            borderRadius: '40px', // Extra rounded corners as per image
+            gap: '8',
+            flex: '1.1',
+            width: 'full',
+            boxShadow: '0 40px 100px -20px rgba(0,0,0,0.4)',
           })}>
+            <h2 className={css({
+              fontSize: { base: '40px', lg: '56px' },
+              fontWeight: '600',
+              lineHeight: '1.1',
+              letterSpacing: '-1px'
+            })}>
+              Levels of AI Learning
+            </h2>
 
-            {chartData.map((item, i) => (
-              <div key={i} className={stack({
-                align: 'center',
-                gap: '3',
-                flex: 1
-              })}>
+            {/* SEARCH BAR (Glassmorphism) */}
+            <div className={flex({
+              bg: 'rgba(255,255,255,0.08)',
+              borderRadius: 'full',
+              px: '6',
+              py: '4',
+              align: 'center',
+              border: '1px solid rgba(255,255,255,0.1)'
+            })}>
+              <span className={css({ fontSize: 'xl', opacity: 0.6 })}>🔍</span>
+              <input
+                placeholder="Search Here"
+                className={css({
+                  ml: '4',
+                  bg: 'transparent',
+                  border: 'none',
+                  outline: 'none',
+                  color: 'white',
+                  fontSize: 'md',
+                  flex: 1,
+                  _placeholder: { color: 'white/30' }
+                })}
+              />
+            </div>
 
-                {/* % */}
-                <span className={css({
-                  fontSize: '14px',
-                  fontWeight: 'bold'
-                })}>
-                  {item.value}%
-                </span>
+            <p className={css({
+              fontSize: '14px',
+              opacity: 0.7,
+              lineHeight: '1.6',
+              maxW: '90%'
+            })}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
 
-                {/* BAR */}
-                <div className={css({
-                  width: '100%',
-                  height: `${item.value * 3}px`,
-                  borderRadius: '16px',
-                  background: 'linear-gradient(180deg, #1f7a7a, #0f3d3e)',
-                  transition: '0.3s',
-                  _hover: {
-                    transform: 'scaleY(1.05)'
-                  }
-                })} />
-
-                {/* LABEL */}
-                <span className={css({
-                  fontSize: '10px',
-                  opacity: 0.6
-                })}>
-                  {item.label}
-                </span>
-
-              </div>
-            ))}
-
+            {/* IMAGE PREVIEW */}
+            <div className={css({
+              borderRadius: '24px',
+              overflow: 'hidden',
+              mt: '4',
+              aspectRatio: '16/9',
+              border: '1px solid rgba(255,255,255,0.1)'
+            })}>
+              <img
+                src="/mock-ai-visual.jpg" 
+                alt="AI Preview"
+                className={css({ w: 'full', h: 'full', objectFit: 'cover' })}
+              />
+            </div>
           </div>
-        </div>
 
-      </div>
-    </main>
+          {/* RIGHT CHART SECTION */}
+          <div className={flex({ 
+            flex: '1', 
+            width: 'full', 
+            justify: 'center', 
+            align: 'flex-end',
+            h: '500px',
+          })}>
+            <div className={flex({ 
+              align: 'flex-end', 
+              gap: { base: '4', md: '10' }, 
+              w: 'full',
+              maxW: '600px',
+              h: 'full',
+              pb: '10'
+            })}>
+              {chartData.map((item, i) => (
+                <div key={i} className={stack({ align: 'center', gap: '5', flex: 1 })}>
+                  {/* Percentage Value */}
+                  <span className={css({ 
+                    fontSize: '20px', 
+                    fontWeight: '700', 
+                    color: '#1a202c' 
+                  })}>
+                    {item.value}%
+                  </span>
+
+                  {/* The Bar with Gradient */}
+                  <div className={css({
+                    w: 'full',
+                    height: `${item.value * 4}px`, // Adjusted scale to match visual height
+                    background: 'linear-gradient(180deg, #103a2e 0%, #2d5a4e 100%)',
+                    borderRadius: '20px',
+                    boxShadow: '0 10px 30px rgba(16, 58, 46, 0.2)',
+                    transition: 'all 0.3s ease',
+                    _hover: { 
+                      transform: 'translateY(-5px)',
+                      filter: 'brightness(1.1)' 
+                    }
+                  })} />
+
+                  {/* Point Label */}
+                  <div className={stack({ align: 'center', gap: '2', w: 'full' })}>
+                    <div className={css({ w: 'full', h: '2px', bg: 'black', opacity: 1 })} />
+                    <span className={css({ 
+                      fontSize: '11px', 
+                      fontWeight: '800', 
+                      color: '#000',
+                      textTransform: 'uppercase'
+                    })}>
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
   );
 }
