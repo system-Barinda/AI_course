@@ -8,20 +8,6 @@ export default function LearnToMakeSection() {
       bg: '#f8fafc',
       fontFamily: 'body',
     })}>
-      
-      {/* HEADER (menu icon removed) */}
-      <header className={flex({ justify: 'space-between', align: 'center', px: '10', py: '6' })}>
-        <div className={flex({ align: 'center', gap: '2' })}>
-          <div className={css({ fontSize: 'xl' })}>✦</div>
-          <span className={css({ fontSize: 'xs', fontWeight: 'bold' })}>YOUR LOGO</span>
-        </div>
-
-        <div className={flex({ gap: '6', align: 'center' })}>
-          <span className={css({ fontSize: 'xs', border: '1px solid #000', px: '3', py: '1', borderRadius: 'full' })}>ABOUT US</span>
-          <span className={css({ fontSize: 'xs' })}>PRODUCT</span>
-          <span className={css({ fontSize: 'xs' })}>CONTACT US</span>
-        </div>
-      </header>
 
       {/* MAIN */}
       <main className={css({
