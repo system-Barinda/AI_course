@@ -8,12 +8,12 @@ export default function FeatureCardsSection() {
       py: '20',
       bg: 'white',
       display: 'grid',
-      gridTemplateColumns: { base: '1fr', lg: '1fr 2fr' }, // Left text, right cards
+      gridTemplateColumns: { base: '1fr', lg: '1fr 2fr' },
       gap: '12',
       alignItems: 'start'
     })}>
 
-      {/* LEFT SECTION: Heading and Subheadline Card */}
+      {/* LEFT SECTION */}
       <div className={stack({ gap: '10' })}>
         <div className={stack({ gap: '4' })}>
           <h2 className={css({ 
@@ -32,7 +32,6 @@ export default function FeatureCardsSection() {
           </p>
         </div>
 
-        {/* Small Subheadline Card with Image */}
         <div className={flex({ 
           bg: '#e2e8f0', 
           p: '4', 
@@ -48,7 +47,6 @@ export default function FeatureCardsSection() {
             borderRadius: 'xl', 
             overflow: 'hidden' 
           })}>
-            {/* Placeholder for laptop user image */}
             <div className={css({ w: 'full', h: 'full', bg: 'gray.400' })} />
           </div>
           <div className={stack({ gap: '0' })}>
@@ -58,17 +56,14 @@ export default function FeatureCardsSection() {
         </div>
       </div>
 
-      {/* RIGHT SECTION: Step Cards and Robot Image */}
+      {/* RIGHT SECTION */}
       <div className={css({
         display: 'grid',
         gridTemplateColumns: { base: '1fr', md: '1fr 1fr 1fr' },
         gap: '6'
       })}>
-        
-        {/* STEP 1 CARD */}
         <StepCard title="Headline" stepNumber="1" />
 
-        {/* CENTER IMAGE CARD (Robot Hand) */}
         <div className={css({
           borderRadius: '3xl',
           overflow: 'hidden',
@@ -76,7 +71,6 @@ export default function FeatureCardsSection() {
           minH: '400px',
           boxShadow: 'xl'
         })}>
-          {/* Placeholder for Robot Hand image */}
           <div className={css({ 
             w: 'full', 
             h: 'full', 
@@ -90,16 +84,14 @@ export default function FeatureCardsSection() {
           </div>
         </div>
 
-        {/* STEP 2 CARD */}
         <StepCard title="Headline" stepNumber="2" />
-
       </div>
     </div>
   );
 }
 
-// Reusable Component for the Step Cards
-function StepCard({ title, stepNumber }: { title: string, stepNumber: string }) {
+// FIXED: Removed the TypeScript type object here
+function StepCard({ title, stepNumber }) {
   return (
     <div className={stack({
       bg: 'linear-gradient(135deg, #0f3d2e 0%, #061712 100%)',
@@ -125,7 +117,6 @@ function StepCard({ title, stepNumber }: { title: string, stepNumber: string }) 
         })}>+</div>
       </div>
 
-      {/* Dots Grid (4x3) */}
       <div className={css({
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
@@ -137,13 +128,11 @@ function StepCard({ title, stepNumber }: { title: string, stepNumber: string }) 
           <div key={i} className={css({
             aspectRatio: '1/1',
             borderRadius: 'full',
-            // Bottom 3 circles are white, others are semi-transparent
             bg: i >= 9 ? 'white' : 'white/20',
           })} />
         ))}
       </div>
 
-      {/* Bottom Step Button */}
       <button className={center({
         w: 'full',
         py: '3',

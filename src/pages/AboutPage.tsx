@@ -1,186 +1,152 @@
 import { css } from '../../styled-system/css';
 import { flex, stack, center } from '../../styled-system/patterns';
 import LearnToMakeSection from "../components/about/LearnToMakeSection"
-import FeatureCardsSection from "../components/about/FeatureCardsSection"
 
-export default function AboutPage() {
+export default function FeatureCardsSection() {
   return (<>
-    <div className={css({ minH: '100vh', bg: 'about.bg', fontFamily: 'body' })}>
-      
-      {/* 1. Universal Header (as seen in image_1.png) */}
-      <header className={flex({ justify: 'space-between', align: 'center', p: '6', lg: { px: '20' } })}>
-        <div className={flex({ align: 'center', gap: '2' })}>
-          {/* Reuse the logo/star icon style from the previous page */}
-          <div className={css({ color: 'about.text', fontSize: '2xl' })}>✦</div>
-          <span className={css({ textTransform: 'uppercase', color: 'about.text', fontSize: 'xs', letterSpacing: 'widest' })}>Your Logo</span>
-        </div>
-        
-        {/* Navigation Items */}
-        <div className={flex({ gap: '8', align: 'center', color: 'about.text', display: { base: 'none', md: 'flex' } })}>
-          <a href="/about" className={css({ border: '1px solid currentColor', px: '4', py: '1', borderRadius: 'full', fontSize: 'sm' })}>ABOUT US</a>
-          <a href="#" className={css({ fontSize: 'sm' })}>PRODUCT</a>
-          <a href="#" className={css({ fontSize: 'sm' })}>CONTACT US</a>
-          <button className={css({ border: '1px solid currentColor', color: 'currentColor', borderRadius: 'full', w: '8', h: '8', display: 'grid', placeItems: 'center' })}>
-            ☰
-          </button>
-        </div>
-      </header>
-
-      {/* 2. Main Content Section */}
-      <main className={flex({ 
-        direction: { base: 'column', lg: 'row' }, // Stack on mobile, row on desktop
-        p: { base: '6', lg: '20' },
-        gap: '12'
-      })}>
-        
-        {/* Left Side: Content and subtle sub-card */}
-        <div className={stack({ flex: '1', gap: '10' })}>
-          {/* Main Heading/Copy */}
-          <div className={stack({ gap: '3', color: 'about.text' })}>
-            <h1 className={css({ fontSize: '5xl', fontWeight: 'bold' })}>Step by Step <br /> AI Mastery</h1>
-            <p className={css({ fontSize: 'md', maxW: '2xl', color: 'about.text/80' })}>
-              Unlock the secrets of Artificial Intelligence. Dive deep into complex concepts 
-              with our structured learning approach. Learn at your own pace with practical examples.
-              Explore the theoretical foundations and their real-world applications.
-              Mastery isn't an accident; it's a step-by-step process.
-            </p>
-          </div>
-
-          {/* Left-side Sub-card (with image & text) */}
-          <div className={flex({ 
-            bg: 'about.subtleCard', 
-            p: '5', 
-            borderRadius: '2xl', 
-            align: 'center',
-            gap: '5',
-            w: 'full',
-            maxW: 'xl'
-          })}>
-            <div className={css({ 
-              aspectRatio: '16/10', 
-              w: '120px', 
-              bg: 'gray.800', // Mock image
-              borderRadius: 'xl', 
-              overflow: 'hidden' 
-            })}>
-              <img src="/mock-image-laptop.jpg" alt="A person on a laptop" className={css({ objectFit: 'cover', w: 'full', h: 'full' })} />
-            </div>
-            <div className={stack({ gap: '1', color: 'about.text' })}>
-              <p className={css({ fontSize: 'md', fontWeight: 'semibold' })}>Subheadline</p>
-              <p className={css({ fontSize: 'xs', color: 'about.text/70' })}>
-                Focused modules on the core tenets of machine learning.
-                Practical projects with real datasets.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Side: Step Cards Grid */}
-        <div className={flex({ 
-          flex: '1.2', 
-          gap: '6', 
-          direction: { base: 'column', sm: 'row' },
-          justify: { lg: 'center' }
-        })}>
-          
-          {/* "Step 1" Card */}
-          <StepCard 
-            title="Headline"
-            stepText="Step 1"
-          />
-
-          {/* "Step 2" Card (Robot Hand) */}
-          <div className={css({
-            flex: '1',
-            borderRadius: '2xl',
-            overflow: 'hidden',
-            boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-            transition: 'transform 0.2s',
-            _hover: { transform: 'translateY(-5px)' }
-          })}>
-            <img 
-              src="/mock-image-robot.jpg" 
-              alt="Close-up of a detailed robotic hand" 
-              className={css({ objectFit: 'cover', w: 'full', h: 'full' })} 
-            />
-          </div>
-
-          {/* "Step 3" Card */}
-          <StepCard 
-            title="Headline"
-            stepText="Step 2" // This maps to the third card in the sequence
-          />
-        </div>
-      </main>
-    </div>
-    <LearnToMakeSection />
-    <FeatureCardsSection />
-    </>
-  );
-}
-
-// Reuseable Component for the Step Cards (Dark Teal with dots)
-// Reusable Component for the Step Cards (Dark Teal with dots)
-function StepCard({ title, stepText }: { title: string; stepText: string }) {
-  return (
     <div className={css({
-      flex: '1',
-      bg: 'about.card',
-      p: '8',
-      color: 'white',
-      borderRadius: '2xl',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '8',
-      w: 'full',
-      minH: '400px',
-      _hover: { boxShadow: '0 15px 30px rgba(0,0,0,0.3)' }
+      px: { base: '6', lg: '20' },
+      py: '20',
+      bg: 'white',
+      display: 'grid',
+      gridTemplateColumns: { base: '1fr', lg: '1fr 2fr' },
+      gap: '12',
+      alignItems: 'start'
     })}>
-      {/* Header of the Card */}
-      <div className={flex({ justify: 'space-between', align: 'start' })}>
-        <div>
-          <h3 className={css({ fontSize: 'xl', fontWeight: 'semibold' })}>{title}</h3>
-          <p className={css({ fontSize: 'xs', color: 'white/60', mt: '1', maxW: '80%' })}>
-            Focused modules on core tenets of machine learning.
+
+      {/* LEFT SECTION */}
+      <div className={stack({ gap: '10' })}>
+        <div className={stack({ gap: '4' })}>
+          <h2 className={css({ 
+            fontSize: '5xl', 
+            fontWeight: 'bold', 
+            color: '#2d4a53', 
+            lineHeight: 'tight' 
+          })}>
+            Step by Step <br /> AI Mastery
+          </h2>
+          <p className={css({ color: '#4a5568', fontSize: 'sm', maxW: 'md' })}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p className={css({ color: '#4a5568', fontSize: 'sm', maxW: 'md' })}>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </p>
         </div>
-        <button className={css({ 
-          w: '6', h: '6', 
-          borderRadius: 'full', 
-          border: '1px solid white', 
-          display: 'grid', placeItems: 'center', 
-          color: 'white',
-          cursor: 'pointer'
-        })}>+</button>
+
+        <div className={flex({ 
+          bg: '#e2e8f0', 
+          p: '4', 
+          borderRadius: '2xl', 
+          gap: '4', 
+          align: 'center',
+          maxW: 'md'
+        })}>
+          <div className={css({ 
+            w: '100px', 
+            h: '60px', 
+            bg: '#cbd5e0', 
+            borderRadius: 'xl', 
+            overflow: 'hidden' 
+          })}>
+            <div className={css({ w: 'full', h: 'full', bg: 'gray.400' })} />
+          </div>
+          <div className={stack({ gap: '0' })}>
+            <span className={css({ fontWeight: 'bold', color: '#2d4a53' })}>Subheadline</span>
+            <p className={css({ fontSize: 'xs', color: '#718096' })}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
       </div>
 
-      {/* Grid of Dots (Centerpiece) */}
-      <div className={flex({ gap: '4', wrap: 'wrap', flex: '1', justify: 'center', align: 'center' })}>
+      {/* RIGHT SECTION */}
+      <div className={css({
+        display: 'grid',
+        gridTemplateColumns: { base: '1fr', md: '1fr 1fr 1fr' },
+        gap: '6'
+      })}>
+        <StepCard title="Headline" stepNumber="1" />
+
+        <div className={css({
+          borderRadius: '3xl',
+          overflow: 'hidden',
+          height: 'full',
+          minH: '400px',
+          boxShadow: 'xl'
+        })}>
+          <div className={css({ 
+            w: 'full', 
+            h: 'full', 
+            bg: 'linear-gradient(to bottom, #1a202c, #2d3748)',
+            display: 'flex',
+            alignItems: 'center',
+            justify: 'center',
+            color: 'white'
+          })}>
+            [Robot Hand Image]
+          </div>
+        </div>
+
+        <StepCard title="Headline" stepNumber="2" />
+      </div>
+    </div>
+    <LearnToMakeSection />
+ </> );
+}
+
+// FIXED: Removed the TypeScript type object here
+function StepCard({ title, stepNumber }) {
+  return (
+    <div className={stack({
+      bg: 'linear-gradient(135deg, #0f3d2e 0%, #061712 100%)',
+      p: '8',
+      borderRadius: '3xl',
+      gap: '6',
+      height: 'full',
+      minH: '400px',
+      position: 'relative'
+    })}>
+      <div className={flex({ justify: 'space-between', align: 'start' })}>
+        <div className={stack({ gap: '1' })}>
+          <h3 className={css({ color: 'white', fontSize: 'xl', fontWeight: 'semibold' })}>{title}</h3>
+          <p className={css({ color: 'white/60', fontSize: 'xs' })}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <div className={center({ 
+          w: '8', h: '8', 
+          borderRadius: 'full', 
+          border: '1px solid white/40', 
+          color: 'white' 
+        })}>+</div>
+      </div>
+
+      <div className={css({
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '4',
+        flex: '1',
+        py: '4'
+      })}>
         {Array.from({ length: 12 }).map((_, i) => (
-          <div key={i} className={css({ 
-            w: '12', h: '12', 
-            borderRadius: 'full', 
-            bg: i >= 9 ? 'white' : 'about.circle', 
-            transition: 'opacity 0.2s',
-            _hover: { opacity: 0.8 }
+          <div key={i} className={css({
+            aspectRatio: '1/1',
+            borderRadius: 'full',
+            bg: i >= 9 ? 'white' : 'white/20',
           })} />
         ))}
       </div>
 
-      {/* Footer (Action Button) - FIXED THE TAGS HERE */}
-      <button className={center({ 
+      <button className={center({
         w: 'full',
-        border: '1px solid rgba(255,255,255,0.3)',
-        color: 'white',
         py: '3',
         borderRadius: 'full',
-        mt: 'auto',
+        border: '1px solid white/30',
+        color: 'white',
         fontSize: 'sm',
-        cursor: 'pointer',
-        _hover: { bg: 'rgba(255,255,255,0.05)' }
+        transition: 'all 0.2s',
+        _hover: { bg: 'white/10' }
       })}>
-        {stepText}
-      </button> 
+        Step {stepNumber}
+      </button>
     </div>
-  );
+  )
 }
