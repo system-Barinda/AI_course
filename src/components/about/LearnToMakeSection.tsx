@@ -1,6 +1,7 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
-import robot from "../../../public/robot.png"
+import robot from "../../../public/womanrobot1.jpg"
+import womanRobot from "../../../public/womanRobot.jpg"
 
 export default function LearnToMakeSection() {
   return (
@@ -75,7 +76,7 @@ export default function LearnToMakeSection() {
             borderRadius: '2xl',
             overflow: 'hidden'
           })}>
-            <img src="/robot-portrait.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+            <img src={womanRobot} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
           </div>
 
           <div className={stack({
