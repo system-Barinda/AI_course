@@ -11,24 +11,6 @@ export default function LearnWithExpertsSection() {
       position: 'relative',
       overflow: 'hidden',
     })}>
-      
-      {/* 1. Header (Updated text color to charcoal) */}
-      <header className={flex({ justify: 'space-between', align: 'center', p: '6', lg: { px: '20' } })}>
-        <div className={flex({ align: 'center', gap: '2' })}>
-          <div className={css({ color: 'expert.textCharcoal', fontSize: '2xl' })}>✦</div>
-          <span className={css({ textTransform: 'uppercase', color: 'expert.textCharcoal', fontSize: 'xs', letterSpacing: 'widest' })}>Your Logo</span>
-        </div>
-        
-        {/* Navigation Items */}
-        <div className={flex({ gap: '8', align: 'center', display: { base: 'none', md: 'flex' } })}>
-          <a href="#" className={css({ border: '1px solid currentColor', px: '4', py: '1', borderRadius: 'full', fontSize: 'sm' })}>ABOUT US</a>
-          <a href="#" className={css({ fontSize: 'sm' })}>PRODUCT</a>
-          <a href="#" className={css({ fontSize: 'sm' })}>CONTACT US</a>
-          <button className={center({ border: '1px solid currentColor', borderRadius: 'full', w: '8', h: '8' })}>
-            ☰
-          </button>
-        </div>
-      </header>
 
       {/* 2. Main Content Container */}
       <main className={flex({ 
