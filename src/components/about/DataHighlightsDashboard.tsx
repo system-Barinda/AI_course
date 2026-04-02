@@ -1,5 +1,7 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
+import  behindgirl from "../../../public/behindgirl.jpg"
+import  codes1 from "../../../public/codes1.jpg"
 
 export default function DataHighlightsDashboard() {
   return (
@@ -57,7 +59,7 @@ export default function DataHighlightsDashboard() {
               borderRadius: '2xl',
               overflow: 'hidden'
             })}>
-              <img src="/dashboard-mock-1.jpg" className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
+              <img src={behindgirl} className={css({ w: 'full', h: 'full', objectFit: 'cover' })} />
             </div>
 
           </div>
@@ -86,7 +88,7 @@ export default function DataHighlightsDashboard() {
 
           {/* TOP IMAGE */}
           <div className={css({ borderRadius: '2xl', overflow: 'hidden' })}>
-            <img src="/dashboard-mock-2.jpg" className={css({ w: 'full', h: '180px', objectFit: 'cover' })} />
+            <img src={codes1} className={css({ w: 'full', h: '180px', objectFit: 'cover' })} />
           </div>
 
           {/* GRAPH CARD */}
