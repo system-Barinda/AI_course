@@ -49,10 +49,10 @@ export default function CoreCurriculum() {
         <div
           className={css({
             position: "relative",
-            borderRadius: "2xl", // Increased radius
+            borderRadius: "2xl", 
             overflow: "hidden",
-            h: "200px", // Increased height
-            backgroundImage: "url('/behindgirl2.jpg')", // Use public path
+            h: "200px", 
+            backgroundImage: "url('/behindgirl2.jpg')", 
             backgroundSize: "cover",
             backgroundPosition: "center",
           })}
