@@ -1,6 +1,6 @@
 import { css } from '../../../styled-system/css';
 import { flex, stack, center } from '../../../styled-system/patterns';
-
+import facerobot from "../../../public/facerobot.jpg"
 export default function LevelAiLearning() {
   const chartData = [
     { label: 'Point 1', value: 49 },
@@ -13,7 +13,7 @@ export default function LevelAiLearning() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: '#e2e8f0', // Light grey base to match the screenshot background
+      bg: "linear-gradient(135deg, #41604e 30%, #cbcfce 50%)", // Light grey base to match the screenshot background
       fontFamily: 'body',
       color: '#1a202c',
       position: 'relative',
@@ -111,7 +111,7 @@ export default function LevelAiLearning() {
               border: '1px solid rgba(255,255,255,0.1)'
             })}>
               <img
-                src="/mock-ai-visual.jpg" 
+                src={facerobot}
                 alt="AI Preview"
                 className={css({ w: 'full', h: 'full', objectFit: 'cover' })}
               />

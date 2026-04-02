@@ -7,9 +7,9 @@ export default function DataHighlightsDashboard() {
   return (
     <div className={css({
       minH: '100vh',
-      bg: '#f1f5f9',
+      bg: "linear-gradient(135deg, #000000 4%, #0a2a22 50%)",
       fontFamily: 'body',
-      color: '#1e293b',
+      color: '#cbcdcf',
     })}>
 
       {/* MAIN GRID */}
@@ -32,7 +32,7 @@ export default function DataHighlightsDashboard() {
             <br /> Data Highlights
           </h1>
 
-          <p className={css({ fontSize: 'sm', color: '#475569' })}>
+          <p className={css({ fontSize: 'sm', color: '#cbcdcf' })}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, aspernatur.
           </p>
 
