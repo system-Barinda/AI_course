@@ -4,101 +4,119 @@ export default function WorldDemands() {
   return (
     <div
       className={css({
-        bg: "#f5f7f6",
-        p: { base: "4", md: "8" },
+        bg: "#f3f4f6", // Light gray background
+        backgroundImage: "radial-gradient(circle at top left, rgba(209, 213, 219, 0.4), transparent)",
+        p: { base: "6", md: "12" },
+        minH: "auto",
+        fontFamily: "sans-serif",
       })}
     >
+    
+
       <div
         className={css({
           display: "grid",
-          gridTemplateColumns: { base: "1fr", md: "1fr 1fr" },
-          gap: "5",
-          alignItems: "center",
+          gridTemplateColumns: { base: "1fr", lg: "1.1fr 0.9fr" },
+          gap: "10",
+          alignItems: "start",
         })}
       >
         {/* LEFT SIDE */}
-        <div
-          className={css({
-            display: "flex",
-            flexDirection: "column",
-            gap: "4",
-          })}
-        >
-          {/* TITLE */}
+        <div className={css({ display: "flex", flexDirection: "column", gap: "6" })}>
           <h2
             className={css({
-              fontSize: { base: "xl", md: "2xl" },
-              fontWeight: "bold",
-              color: "#1f2937",
+              fontSize: { base: "3xl", md: "5xl" },
+              fontWeight: "700",
+              color: "#374151",
+              lineHeight: "1.1",
             })}
           >
             Learn What the <br /> World Demands
           </h2>
 
-          {/* DESCRIPTION */}
           <p
             className={css({
               fontSize: "sm",
-              color: "gray.500",
-              maxW: "400px",
+              color: "#6b7280",
+              maxW: "480px",
+              lineHeight: "1.6",
             })}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
 
-          {/* VIDEO / IMAGE */}
+          {/* MAIN VIDEO/IMAGE AREA */}
           <div
             className={css({
-              borderRadius: "lg",
+              borderRadius: "2xl",
               overflow: "hidden",
-              h: "140px",
-              backgroundImage: "url('/personcode2.jpg')", // ✅ public image
+              h: "240px",
+              backgroundImage: "url('/personcode2.jpg')", 
               backgroundSize: "cover",
               backgroundPosition: "center",
+              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+              position: "relative",
             })}
-          />
+          >
+             {/* Simple Overlay Placeholder for the inner UI shown in image */}
+             <div className={css({
+               position: "absolute",
+               bottom: "15%",
+               left: "5%",
+               right: "5%",
+               h: "30px",
+               bg: "rgba(255,255,255,0.1)",
+               backdropFilter: "blur(4px)",
+               borderRadius: "full",
+               border: "1px solid rgba(255,255,255,0.2)"
+             })} />
+          </div>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE GRID */}
         <div
           className={css({
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: "4",
+            gap: "5",
           })}
         >
-          {/* TOP CARDS */}
-          {["Subheading", "Subheading"].map((item, i) => (
+          {/* TOP TWO CARDS */}
+          {["Subheadline", "Subheadline"].map((item, i) => (
             <div
               key={i}
               className={css({
-                bg: "linear-gradient(135deg, #134e4a, #0f766e)",
+                bgGradient: "to-br",
+                gradientFrom: "#115e59",
+                gradientTo: "#064e3b",
                 color: "white",
-                borderRadius: "lg",
-                p: "4",
+                borderRadius: "2xl",
+                p: "6",
                 display: "flex",
                 flexDirection: "column",
-                gap: "2",
-                minH: "100px",
+                gap: "3",
+                minH: "160px",
+                boxShadow: "md",
               })}
             >
-              <h3 className={css({ fontSize: "sm", fontWeight: "bold" })}>
-                {item}
-              </h3>
-
-              <p className={css({ fontSize: "xs", opacity: 0.8 })}>
-                Lorem ipsum dolor sit amet consectetur.
+              <h3 className={css({ fontSize: "md", fontWeight: "600" })}>{item}</h3>
+              <p className={css({ fontSize: "xs", color: "rgba(255,255,255,0.7)", lineHeight: "1.5" })}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
               </p>
-
               <button
                 className={css({
                   mt: "auto",
-                  bg: "rgba(255,255,255,0.2)",
+                  alignSelf: "flex-start",
+                  bg: "rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(8px)",
+                  border: "1px solid rgba(255,255,255,0.2)",
                   borderRadius: "full",
-                  px: "3",
-                  py: "1",
+                  px: "4",
+                  py: "1.5",
                   fontSize: "xs",
+                  fontWeight: "500",
+                  cursor: "pointer",
+                  _hover: { bg: "rgba(255,255,255,0.25)" }
                 })}
               >
                 Learn More
@@ -106,43 +124,43 @@ export default function WorldDemands() {
             </div>
           ))}
 
-          {/* BOTTOM STATS PANEL */}
+          {/* BOTTOM WIDE STATS PANEL */}
           <div
             className={css({
               gridColumn: "span 2",
-              bg: "linear-gradient(135deg, #134e4a, #0f766e)",
+              bgGradient: "to-r",
+              gradientFrom: "#115e59",
+              gradientTo: "#064e3b",
               color: "white",
-              borderRadius: "lg",
-              p: "4",
+              borderRadius: "2xl",
+              p: "8",
               display: "grid",
-              gridTemplateColumns: "1fr 2fr",
-              gap: "4",
+              gridTemplateColumns: "0.8fr 2fr",
+              gap: "8",
               alignItems: "center",
+              boxShadow: "md",
             })}
           >
-            {/* LEFT NUMBERS */}
-            <div>
-              <h3 className={css({ fontSize: "lg", fontWeight: "bold" })}>
-                10%
-              </h3>
-              <h3 className={css({ fontSize: "lg", fontWeight: "bold", mt: "2" })}>
-                34%
-              </h3>
+            {/* LARGE PERCENTAGES */}
+            <div className={css({ display: "flex", flexDirection: "column", gap: "4" })}>
+              <div className={css({ fontSize: "4xl", fontWeight: "300" })}>10%</div>
+              <div className={css({ fontSize: "4xl", fontWeight: "300" })}>34%</div>
             </div>
 
-            {/* RIGHT TEXT */}
-            <div className={css({ fontSize: "xs", opacity: 0.9 })}>
-              <p>
-                <strong>Lorem Ipsum Dolor</strong>
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-              </p>
-
-              <p className={css({ mt: "2" })}>
-                <strong>Lorem Ipsum Dolor</strong>
-                <br />
-                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-              </p>
+            {/* DESCRIPTION TEXT */}
+            <div className={css({ display: "flex", flexDirection: "column", gap: "6" })}>
+              <div>
+                <h4 className={css({ fontSize: "sm", fontWeight: "700", mb: "1" })}>Lorem Ipsum Dolor</h4>
+                <p className={css({ fontSize: "xs", color: "rgba(255,255,255,0.7)" })}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                </p>
+              </div>
+              <div>
+                <h4 className={css({ fontSize: "sm", fontWeight: "700", mb: "1" })}>Lorem Ipsum Dolor</h4>
+                <p className={css({ fontSize: "xs", color: "rgba(255,255,255,0.7)" })}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                </p>
+              </div>
             </div>
           </div>
         </div>
