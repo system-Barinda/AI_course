@@ -5,27 +5,29 @@ export default function CoreCurriculum() {
     <div
       className={css({
         display: "grid",
-        gridTemplateColumns: { base: "1fr", md: "1fr 1fr" },
-        minH: "60vh", 
+        gridTemplateColumns: { base: "1fr", md: "1.2fr 1fr" }, // Adjusted Ratio
+        minH: "70vh", // Increased min height
       })}
     >
       {/* LEFT SIDE */}
       <div
         className={css({
-          bg: "#f5f7f6",
-          p: { base: "5", md: "10" },
+          bg: "#f3f4f6", // Updated background color
+          p: { base: "6", md: "12" }, // Increased padding
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          gap: "5",
+          gap: "8",
         })}
       >
+       
+
         {/* TITLE */}
         <h2
           className={css({
-            fontSize: { base: "xl", md: "2xl" },
-            fontWeight: "bold",
-            color: "#1f2937",
+            fontSize: { base: "4xl", md: "5xl" }, // Increased size
+            fontWeight: "700",
+            color: "#374151",
+            letterSpacing: "tight",
           })}
         >
           Core Curriculum
@@ -34,23 +36,23 @@ export default function CoreCurriculum() {
         {/* DESCRIPTION */}
         <p
           className={css({
-            fontSize: "sm",
-            color: "gray.500",
-            maxW: "400px",
+            fontSize: "md", // Increased size
+            color: "#6b7280",
+            maxW: "480px",
+            lineHeight: "1.6",
           })}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
 
         {/* VIDEO CARD */}
         <div
           className={css({
             position: "relative",
-            borderRadius: "xl",
+            borderRadius: "2xl", // Increased radius
             overflow: "hidden",
-            h: "160px",
-            backgroundImage: "url('/personcode1.jpg')", // ✅ use public path
+            h: "200px", // Increased height
+            backgroundImage: "url('/behindgirl2.jpg')", // Use public path
             backgroundSize: "cover",
             backgroundPosition: "center",
           })}
@@ -60,33 +62,37 @@ export default function CoreCurriculum() {
             className={css({
               position: "absolute",
               inset: 0,
-              bg: "rgba(0,0,0,0.4)",
+              bg: "rgba(0,0,0,0.5)", // Darker overlay
             })}
-          />
+           />
 
           {/* bottom info */}
           <div
             className={css({
               position: "absolute",
-              bottom: "0",
-              left: "0",
-              right: "0",
-              p: "3",
+              bottom: "4", // Adjust position
+              left: "4",
+              right: "4",
+              p: "4",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               color: "white",
-              fontSize: "sm",
+              fontSize: "md",
+              bgGradient: "to-r",
+              gradientFrom: "#115e59", // Teal to Green gradient
+              gradientTo: "#064e3b",
+              borderRadius: "xl",
             })}
           >
-            <span>Your Data</span>
+            <div>
+              <p className={css({ fontWeight: "600" })}>Your Data</p>
+              <p className={css({ fontSize: "xs", color: "rgba(255,255,255,0.7)" })}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
             <span
               className={css({
-                bg: "#1f766e",
-                px: "3",
-                py: "1",
-                borderRadius: "full",
-                fontWeight: "bold",
+                fontSize: "2xl",
+                fontWeight: "700",
               })}
             >
               $43,908
@@ -98,76 +104,89 @@ export default function CoreCurriculum() {
       {/* RIGHT SIDE */}
       <div
         className={css({
-          bg: "linear-gradient(135deg, #134e4a, #0f766e)",
-          p: { base: "5", md: "10" },
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "4",
+          bgGradient: "to-br",
+          gradientFrom: "#064e3b", // Dark Green to Teal gradient
+          gradientTo: "#115e59",
+          p: { base: "6", md: "12" },
+          position: "relative",
         })}
       >
-        {[
-          { num: "01", title: "Start coding" },
-          { num: "02", title: "AI models" },
-          { num: "03", title: "Data handling" },
-          { num: "04", title: "Deployment" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className={css({
-              bg: "rgba(255,255,255,0.1)",
-              backdropFilter: "blur(10px)",
-              borderRadius: "lg",
-              p: "4",
-              color: "white",
-              position: "relative",
-              minH: "120px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            })}
-          >
-            {/* NUMBER */}
-            <span
-              className={css({
-                fontSize: "lg",
-                fontWeight: "bold",
-                opacity: 0.8,
-              })}
-            >
-              {item.num}
-            </span>
 
-            {/* TITLE */}
-            <h3 className={css({ fontSize: "sm", fontWeight: "bold" })}>
-              {item.title}
-            </h3>
-
-            {/* TEXT */}
-            <p className={css({ fontSize: "xs", opacity: 0.7 })}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-
-            {/* ICON */}
+        {/* GRID OF CARDS */}
+        <div
+          className={css({
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "6",
+            mt: "24", // Adjust top margin
+          })}
+        >
+          {[
+            { num: "01", title: "Start coding" },
+            { num: "02", title: "AI models" },
+            { num: "03", title: "Data handling" },
+            { num: "04", title: "Deployment" },
+          ].map((item, i) => (
             <div
+              key={i}
               className={css({
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                w: "18px",
-                h: "18px",
-                borderRadius: "full",
-                bg: "white",
-                color: "#134e4a",
+                bg: "rgba(255,255,255,0.06)", // Adjust transparency
+                backdropFilter: "blur(12px)", // Adjust blur
+                borderRadius: "xl", // Increased radius
+                border: "1px solid rgba(255,255,255,0.08)", // Add border
+                p: "6", // Increased padding
+                color: "white",
+                position: "relative",
+                minH: "160px", // Increased min height
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "10px",
+                flexDirection: "column",
+                gap: "3",
               })}
             >
-              +
+              {/* NUMBER */}
+              <span
+                className={css({
+                  fontSize: "3xl", // Increased size
+                  fontWeight: "700",
+                  opacity: 0.9,
+                })}
+              >
+                {item.num}
+              </span>
+
+              {/* TITLE */}
+              <h3 className={css({ fontSize: "md", fontWeight: "700" })}>
+                {item.title}
+              </h3>
+
+              {/* TEXT */}
+              <p className={css({ fontSize: "xs", color: "rgba(255,255,255,0.7)", lineHeight: "1.6" })}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+
+              {/* ICON */}
+              <div
+                className={css({
+                  position: "absolute",
+                  top: "16px",
+                  right: "16px",
+                  w: "24px",
+                  h: "24px",
+                  borderRadius: "full",
+                  bg: "rgba(255,255,255,0.1)", // Transparent background
+                  color: "white",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                })}
+              >
+                +
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
