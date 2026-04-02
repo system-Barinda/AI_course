@@ -1,42 +1,40 @@
 import { css } from "../../../styled-system/css";
-import learningImg from "../../../public/personcode2.jpg"
-import learningImg1 from "../../../public/personcode1.jpg"
 
 export default function LearningFormat() {
   return (
     <div
       className={css({
         bg: "#f5f7f6",
-        p: { base: "6", md: "12" },
+        p: { base: "8", md: "12" }, // reduced padding
       })}
     >
       {/* HEADER */}
       <div
         className={css({
           textAlign: "center",
-          mb: "10",
+          mb: "6", // reduced space
         })}
       >
         <h2
           className={css({
-            fontSize: { base: "2xl", md: "3xl" },
+            fontSize: { base: "xl", md: "2xl" }, // smaller
             fontWeight: "bold",
             color: "#1f2937",
           })}
         >
           Learning Format
         </h2>
+
         <p
           className={css({
             color: "gray.500",
-            maxW: "500px",
+            maxW: "400px",
             mx: "auto",
-            mt: "3",
-            fontSize: "sm",
+            mt: "2",
+            fontSize: "xs",
           })}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
 
@@ -45,28 +43,30 @@ export default function LearningFormat() {
         className={css({
           display: "grid",
           gridTemplateColumns: { base: "1fr", md: "2fr 1fr" },
-          gap: "6",
+          gap: "4",
+          alignItems: "center",
         })}
       >
         {/* LEFT SIDE */}
-        <div className={css({ display: "flex", flexDirection: "column", gap: "6" })}>
-          {/* IMAGE */}
+        <div className={css({ display: "flex", flexDirection: "column", gap: "4" })}>
+          
+          {/* TOP IMAGE */}
           <div
             className={css({
-              h: "200px",
-              borderRadius: "xl",
-              backgroundImage: `url(${learningImg})`,
+              h: "300px", // reduced height
+              borderRadius: "lg",
+              backgroundImage: "url('/personcode2.jpg')", // ✅ FIXED
               backgroundSize: "cover",
               backgroundPosition: "center",
             })}
           />
-          <img src ={learningImg} />
+
           {/* STATS + IMAGE */}
           <div
             className={css({
               display: "grid",
-              gridTemplateColumns: { base: "1fr 1fr", md: "1fr 1fr 2fr" },
-              gap: "4",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "3",
             })}
           >
             {/* CARD 1 */}
@@ -74,15 +74,14 @@ export default function LearningFormat() {
               className={css({
                 bg: "#1f766e",
                 color: "white",
-                p: "4",
-                borderRadius: "xl",
+                p: "3",
+                borderRadius: "lg",
                 textAlign: "center",
               })}
             >
-              <h3 className={css({ fontSize: "xl", fontWeight: "bold" })}>45%</h3>
-              <p className={css({ fontSize: "xs" })}>
-                Lorem ipsum dolor sit amet
-              </p>
+              <h3 className={css({ fontSize: "md", fontWeight: "bold" })}>
+                45%
+              </h3>
             </div>
 
             {/* CARD 2 */}
@@ -90,26 +89,24 @@ export default function LearningFormat() {
               className={css({
                 bg: "#2c8f85",
                 color: "white",
-                p: "4",
-                borderRadius: "xl",
+                p: "3",
+                borderRadius: "lg",
                 textAlign: "center",
               })}
             >
-              <h3 className={css({ fontSize: "xl", fontWeight: "bold" })}>65%</h3>
-              <p className={css({ fontSize: "xs" })}>
-                Lorem ipsum dolor sit amet
-              </p>
+              <h3 className={css({ fontSize: "md", fontWeight: "bold" })}>
+                65%
+              </h3>
             </div>
 
-            {/* IMAGE */}
-            <img src={learningImg1 } />
+            {/* SMALL IMAGE */}
             <div
               className={css({
-                borderRadius: "xl",
-                backgroundImage: `url(${learningImg})`,
+                borderRadius: "lg",
+                backgroundImage: "url('/personcode1.jpg')", // ✅ FIXED
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minH: "120px",
+                h: "200px",
               })}
             />
           </div>
@@ -120,8 +117,7 @@ export default function LearningFormat() {
           className={css({
             display: "flex",
             flexDirection: "column",
-            gap: "4",
-            justifyContent: "center",
+            gap: "3",
           })}
         >
           {[
@@ -135,27 +131,28 @@ export default function LearningFormat() {
               className={css({
                 bg: "#1f766e",
                 color: "white",
-                px: "5",
-                py: "3",
+                px: "4",
+                py: "2",
                 borderRadius: "full",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                boxShadow: "md",
+                fontSize: "xs",
               })}
             >
-              <span className={css({ fontSize: "sm" })}>{item}</span>
+              <span>{item}</span>
+
               <div
                 className={css({
-                  w: "20px",
-                  h: "20px",
+                  w: "26px",
+                  h: "26px",
                   bg: "white",
                   color: "#1f766e",
                   borderRadius: "full",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "xs",
+                  fontSize: "10px",
                 })}
               >
                 ✓
