@@ -6,7 +6,7 @@ export default function CoreCurriculum() {
       className={css({
         display: "grid",
         gridTemplateColumns: { base: "1fr", md: "1fr 1fr" },
-        minH: "60vh", // reduced height
+        minH: "60vh", 
       })}
     >
       {/* LEFT SIDE */}
