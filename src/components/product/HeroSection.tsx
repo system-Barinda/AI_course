@@ -18,7 +18,6 @@ export default function HeroSection() {
         className={css({
           bg: "radial-gradient(circle at top left, #115e59, #022c22)",
           color: "white",
-          // CHANGE: Reduced padding from 16 to 10/12 to keep it tight
           p: { base: "8", md: "12" }, 
           display: "flex",
           flexDirection: "column",
@@ -29,7 +28,7 @@ export default function HeroSection() {
      
         <h1
           className={css({
-            fontSize: { base: "3xl", md: "5xl" }, // Slightly smaller to save vertical space
+            fontSize: { base: "3xl", md: "5xl" }, 
             fontWeight: "700",
             lineHeight: "1.1",
             letterSpacing: "tight",
@@ -144,7 +143,7 @@ export default function HeroSection() {
           bg: "#1e1e1e", 
           backgroundSize: "cover",
           backgroundPosition: "center",
-          // CHANGE: Added minH here to ensure the image side is at least as tall as the content side
+          backgroundImage: "url('/screen.png')",
           minH: "100%",
         })}
       >
