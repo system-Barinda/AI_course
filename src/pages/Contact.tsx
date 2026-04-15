@@ -5,55 +5,13 @@ import { flex, stack, container } from '../../styled-system/patterns';
 const Contact = () => {
   return (
     <div className={css({ 
-      bg: 'dark', 
+      bg: 'linear-gradient(142deg, #01130f 60%, #0e4235 50%)', 
       minH: '100vh', 
       color: 'white', 
       fontFamily: 'sans-serif',
       position: 'relative',
       overflow: 'hidden'
     })}>
-      
-      {/* Background Glow */}
-      <div className={css({
-        position: 'absolute',
-        bottom: '-20%',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '120vw',
-        height: '60vh',
-        background: 'radial-gradient(circle, rgba(255,77,0,0.4) 0%, rgba(10,10,10,0) 70%)',
-        filter: 'blur(60px)',
-        zIndex: 0
-      })} />
-
-      {/* Navigation */}
-      <nav className={flex({ 
-        justify: 'space-between', 
-        align: 'center', 
-        p: '6', 
-        maxWidth: '1200px', 
-        mx: 'auto',
-        position: 'relative',
-        zIndex: 10
-      })}>
-        <div className={flex({ align: 'center', gap: '2', fontWeight: 'bold', fontSize: '2xl' })}>
-          <div className={css({ w: '8', h: '8', bg: 'brand', borderRadius: 'full' })} />
-          Kelas AI
-        </div>
-        
-        <div className={flex({ gap: '8', display: { base: 'none', md: 'flex' }, fontSize: 'sm', textTransform: 'uppercase', letterSpacing: 'widest' })}>
-          <a href="#" className={css({ color: 'gray.400', _hover: { color: 'white' } })}>Home</a>
-          <a href="#" className={css({ borderBottom: '2px solid', borderColor: 'brand' })}>Courses</a>
-          <a href="#" className={css({ color: 'gray.400' })}>Pricing</a>
-          <a href="#" className={css({ color: 'gray.400' })}>Contact</a>
-        </div>
-
-        <button className={css({ 
-          px: '6', py: '2', border: '1px solid', borderColor: 'white/20', borderRadius: 'full', fontSize: 'sm' 
-        })}>
-          ENROLL NOW
-        </button>
-      </nav>
 
       {/* Hero Section */}
       <main className={container({ 
@@ -113,7 +71,7 @@ const Contact = () => {
           overflow: 'hidden',
           boxShadow: '2xl'
         })}>
-          <img src="/api/placeholder/200/150" alt="Student" />
+          <img src="/person1.jpg" alt="Student" />
         </div>
 
         <div className={css({
@@ -126,7 +84,7 @@ const Contact = () => {
           backdropFilter: 'blur(10px)',
           p: '4'
         })}>
-          <img src="/api/placeholder/150/100" alt="Brain AI" className={css({ borderRadius: 'lg' })} />
+          <img src="/behindgirl.jpg" alt="Brain AI" className={css({ borderRadius: 'lg' })} />
         </div>
 
         {/* Stats Section */}
