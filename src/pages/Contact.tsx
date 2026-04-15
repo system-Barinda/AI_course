@@ -26,7 +26,7 @@ const StatBox = ({ number, label }: { number: string, label: string }) => (
 const Contact = () => {
   return (
     <div className={css({ 
-      bg: '#0A0A0A', 
+      bg: 'linear-gradient(142deg, #01130f 60%, #0e4235 50%)', 
       minH: '100vh', 
       color: 'white', 
       fontFamily: 'sans-serif',
