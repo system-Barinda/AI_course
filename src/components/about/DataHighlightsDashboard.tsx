@@ -14,6 +14,7 @@ export default function DataHighlightsDashboard() {
     <div
       className={stack({
         gap: "6",
+        bg: 'linear-gradient(165deg, #01130f 60%, #0e4235 50%)',
         p: "6",
         align: "center",
       })}
