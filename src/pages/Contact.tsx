@@ -26,7 +26,7 @@ const StatBox = ({ number, label }: { number: string, label: string }) => (
 const Contact = () => {
   return (
     <div className={css({ 
-      bg: 'linear-gradient(142deg, #01130f 60%, #0e4235 50%)', 
+      bg: 'linear-gradient(142deg, #01130f 60%, #0e4235 20%, #0e4235 40%)', 
       minH: '100vh', 
       color: 'white', 
       fontFamily: 'sans-serif',
@@ -95,8 +95,8 @@ const Contact = () => {
           mx: 'auto',
           letterSpacing: 'tight'
         })}>
-          Learn Practical AI Skills <br /> 
-          <span className={css({ color: 'white/90' })}>for Tomorrow</span>
+          Let’s build the future of  <br /> 
+          <span className={css({ color: 'white/90' })}>your business together.</span>
         </h1>
 
         {/* Description */}
