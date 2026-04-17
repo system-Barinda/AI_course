@@ -1,5 +1,4 @@
-import { css } from "../../styled-system/css";
-
+import {css} from "../../../styled-system/css"
 const features = [
   {
     title: "Fast Performance",

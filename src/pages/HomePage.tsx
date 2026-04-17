@@ -1,11 +1,11 @@
 import { css } from '../../styled-system/css';
 import { flex, stack, container } from '../../styled-system/patterns';
 import image1 from "../../public/im1.png"
-import InteractiveSection from "../components/home/InteractiveSection.jsx";
-
+import InteractiveSection from "../components/home/InteractiveSection"
 
 export default function HomePage() {
-  return (<>
+  return (
+  <>
     <div className={css({
       minH: '100vh',
       bg: 'linear-gradient(135deg, #000000 0%, #0a2a22 50%, #154d3f 100%)',
@@ -92,6 +92,7 @@ export default function HomePage() {
         </div>
       </main>
     </div>
+    
     <InteractiveSection />
   </>);
 }
