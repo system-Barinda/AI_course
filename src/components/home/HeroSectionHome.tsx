@@ -152,7 +152,7 @@ export default function HeroSectionHome() {
 
           {/* The Person (spills out of the box) */}
           <img 
-            src="/person.png" // Use a transparent background image
+            src="/person.jpg" // Use a transparent background image
             alt="Business Woman"
             className={css({
               position: "relative",
@@ -200,7 +200,9 @@ export default function HeroSectionHome() {
             right: "30px",
             bg: "#00E699",
             w: "44px", h: "44px",
-            display: "flex", align: "center", justify: "center",
+            display: "flex",
+             align: "center",
+              justify: "center",
             borderRadius: "full",
             color: "black",
             zIndex: 10,
