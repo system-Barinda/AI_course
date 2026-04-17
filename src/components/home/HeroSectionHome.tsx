@@ -9,139 +9,162 @@ export default function HeroSectionHome() {
         bg: "black",
         color: "white",
         px: { base: "20px", lg: "80px" },
-        pt: "40px",
-        fontFamily: "sans-serif",
+        pt: "24px",
+        pb: "40px",
+        overflow: "hidden",
+        fontFamily: "Inter, sans-serif", // Ensure a modern sans-serif
       })}
     >
       {/* --- TOP NAVIGATION BAR --- */}
-      <nav className={flex({ justify: "space-between", align: "center", mb: "60px" })}>
-        {/* Pill-shaped Brand/Nav Container */}
+      <nav className={flex({ justify: "space-between", align: "center", mb: "40px" })}>
         <div
           className={css({
-            bg: "rgba(255, 255, 255, 0.05)",
-            backdropFilter: "blur(10px)",
+            bg: "#141414",
             borderRadius: "full",
-            px: "10px",
+            pl: "12px",
+            pr: "8px",
             py: "8px",
             display: "flex",
             alignItems: "center",
-            gap: "20px",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
+            gap: "16px",
+            border: "1px solid rgba(255, 255, 255, 0.05)",
           })}
         >
           {/* Logo */}
-          <div className={flex({ align: "center", gap: "8px", px: "10px" })}>
-            <div className={css({ w: "24px", h: "24px", border: "4px solid #00E699", borderRadius: "full" })} />
-            <span className={css({ fontWeight: "600", fontSize: "15px" })}>Next Scale</span>
+          <div className={flex({ align: "center", gap: "8px" })}>
+            <div className={css({ 
+              w: "28px", h: "28px", 
+              border: "5px solid #00E699", 
+              borderRadius: "full",
+              boxShadow: "0 0 10px rgba(0, 230, 153, 0.3)"
+            })} />
+            <span className={css({ fontWeight: "600", fontSize: "16px", color: "#E0E0E0" })}>Next Scale</span>
           </div>
 
-          {/* Internal Nav Pills */}
-          <div className={flex({ gap: "8px" })}>
-            <div className={css({ bg: "white", color: "black", px: "20px", py: "6px", borderRadius: "full", fontSize: "14px", fontWeight: "500", display: "flex", alignItems: "center", gap: "5px" })}>
-               <span>🏠</span> Home
+          {/* Navigation Pills */}
+          <div className={flex({ gap: "6px" })}>
+            <div className={css({ 
+              bg: "white", color: "black", px: "18px", py: "8px", 
+              borderRadius: "full", fontSize: "14px", fontWeight: "600", 
+              display: "flex", alignItems: "center", gap: "6px" 
+            })}>
+               <span className={css({ fontSize: "16px" })}>⌂</span> Home
             </div>
-            <div className={css({ bg: "rgba(255,255,255,0.1)", p: "8px", borderRadius: "full", cursor: "pointer" })}>ⓘ</div>
-            <div className={css({ bg: "rgba(255,255,255,0.1)", p: "8px", borderRadius: "full", cursor: "pointer" })}>❐</div>
-            <div className={css({ bg: "rgba(255,255,255,0.1)", p: "8px", borderRadius: "full", cursor: "pointer" })}>☰</div>
+            <div className={css({ bg: "rgba(255,255,255,0.08)", p: "10px", borderRadius: "full", fontSize: "14px" })}>ⓘ</div>
+            <div className={css({ bg: "rgba(255,255,255,0.08)", p: "10px", borderRadius: "full", fontSize: "14px" })}>❐</div>
+            <div className={css({ bg: "rgba(255,255,255,0.08)", p: "10px", borderRadius: "full", fontSize: "14px" })}>☰</div>
           </div>
         </div>
 
-        {/* Contact Button */}
-        <button className={css({ bg: "#00E699", color: "black", px: "24px", py: "10px", borderRadius: "full", fontWeight: "bold", fontSize: "14px", cursor: "pointer", transition: "transform 0.2s", _hover: { transform: "scale(1.05)" } })}>
+        <button className={css({ 
+          bg: "#00E699", color: "black", px: "28px", py: "12px", 
+          borderRadius: "full", fontWeight: "bold", fontSize: "14px",
+          transition: "all 0.3s", _hover: { transform: "translateY(-2px)", bg: "#00ffaa" }
+        })}>
           Contact Us
         </button>
       </nav>
 
-      <div className={grid({ columns: { base: 1, lg: 2 }, gap: "40px", alignItems: "flex-end" })}>
+      <div className={grid({ columns: { base: 1, lg: 2 }, gap: "20px", alignItems: "center" })}>
         
-        {/* --- LEFT SIDE: HERO CONTENT --- */}
-        <div className={stack({ gap: "32px", pb: "40px" })}>
-          <h1 className={css({ fontSize: { base: "48px", lg: "84px" }, fontWeight: "600", lineHeight: "0.95", letterSpacing: "-0.04em" })}>
+        {/* --- LEFT SIDE --- */}
+        <div className={stack({ gap: "24px" })}>
+          <h1 className={css({ 
+            fontSize: { base: "52px", lg: "92px" }, 
+            fontWeight: "600", 
+            lineHeight: "0.9", 
+            letterSpacing: "-0.03em" 
+          })}>
             Grow Your <br />
             Business With <br />
             <span className={css({ color: "#00E699" })}>Strategy</span>
           </h1>
 
-          <p className={css({ color: "rgba(255,255,255,0.6)", maxW: "380px", fontSize: "18px", lineHeight: "1.6" })}>
+          <p className={css({ color: "#999", maxW: "420px", fontSize: "18px", lineHeight: "1.5" })}>
             We help brands transform ideas into profitable business through strategic planning.
           </p>
 
-          <div className={flex({ gap: "16px" })}>
-            <button className={css({ bg: "#1A1A1A", px: "32px", py: "14px", borderRadius: "full", fontWeight: "500" })}>Get Started</button>
-            <button className={css({ bg: "#00E699", color: "black", px: "32px", py: "14px", borderRadius: "full", fontWeight: "bold" })}>Learn More</button>
+          <div className={flex({ gap: "12px", pt: "10px" })}>
+            <button className={css({ bg: "#141414", color: "white", px: "32px", py: "16px", borderRadius: "20px", fontWeight: "600", fontSize: "16px", border: "1px solid #222" })}>Get Started</button>
+            <button className={css({ bg: "#00E699", color: "black", px: "32px", py: "16px", borderRadius: "20px", fontWeight: "700", fontSize: "16px" })}>Learn More</button>
           </div>
 
-          {/* Social Proof */}
-          <div className={flex({ align: "center", gap: "16px", pt: "20px" })}>
+          {/* Member Stats */}
+          <div className={flex({ align: "center", gap: "16px", pt: "30px" })}>
             <div className={flex({ align: "center" })}>
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className={css({ w: "45px", h: "45px", borderRadius: "full", border: "3px solid black", ml: i === 1 ? "0" : "-15px", overflow: "hidden", bg: "gray.700" })}>
-                  <img src={`https://i.pravatar.cc/100?u=${i}`} alt="avatar" />
+                <div key={i} className={css({ 
+                  w: "48px", h: "48px", borderRadius: "full", 
+                  border: "4px solid black", ml: i === 1 ? "0" : "-18px", 
+                  overflow: "hidden", bg: "#222" 
+                })}>
+                  <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
                 </div>
               ))}
             </div>
             <div>
-              <div className={css({ fontSize: "24px", fontWeight: "bold", color: "#00E699" })}>18K+</div>
-              <div className={css({ fontSize: "14px", color: "gray.400" })}>Our Member</div>
+              <div className={css({ fontSize: "28px", fontWeight: "700", color: "white" })}>18K+</div>
+              <div className={css({ fontSize: "14px", color: "#666" })}>Our Member</div>
             </div>
           </div>
         </div>
 
-        {/* --- RIGHT SIDE: IMAGE & DECORATION --- */}
-        <div className={css({ position: "relative", width: "100%", height: "100%" })}>
+        {/* --- RIGHT SIDE --- */}
+        <div className={css({ position: "relative", width: "100%", height: "600px", display: "flex", alignItems: "flex-end" })}>
           
-          {/* Green "Liquid" Background Shape */}
+          {/* Scalloped Background Box */}
           <div className={css({
             position: "absolute",
-            top: "0",
+            bottom: "0",
             right: "0",
-            zIndex: 0,
-            width: "90%",
-            height: "100%",
-            background: "linear-gradient(135deg, #004D33 0%, #00E699 100%)",
-            maskImage: "radial-gradient(circle at 20% 20%, transparent 150px, black 151px)", // Simplified scallop effect
+            width: "100%",
+            height: "85%",
+            background: "linear-gradient(180deg, #001A11 0%, #003322 100%)",
             borderRadius: "40px",
+            // The magic "cutout" effect
+            clipPath: "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 100%, 0% 100%)",
             overflow: "hidden"
           })}>
-             {/* Swirly Overlay (Using a CSS gradient for texture) */}
+             {/* Swirly Pattern Texture */}
              <div className={css({
-               width: "100%",
-               height: "100%",
-               opacity: 0.4,
-               backgroundImage: "repeating-radial-gradient(circle at 50% 50%, transparent, #00E699 100px)",
-               filter: "blur(40px)"
+               width: "200%", height: "200%",
+               opacity: 0.3,
+               backgroundImage: "radial-gradient(circle at center, #00E699 0%, transparent 60%)",
+               filter: "blur(60px)",
+               animation: "pulse 8s infinite alternate"
              })} />
           </div>
 
-          {/* Badge: 82+ */}
+          {/* Floating Badge (82+) */}
           <div className={css({
             position: "absolute",
-            top: "40px",
-            right: "40px",
-            bg: "rgba(0,0,0,0.8)",
-            p: "16px",
-            borderRadius: "20px",
-            zIndex: 2,
-            textAlign: "left"
+            top: "5%",
+            right: "0",
+            bg: "rgba(10, 10, 10, 0.9)",
+            p: "20px",
+            borderRadius: "24px",
+            zIndex: 10,
+            border: "1px solid #222"
           })}>
-            <span className={css({ color: "#00E699", fontSize: "24px", fontWeight: "bold", display: "block" })}>82+</span>
-            <span className={css({ fontSize: "12px", color: "gray.300" })}>New Service <br/> on here</span>
+            <span className={css({ color: "#00E699", fontSize: "28px", fontWeight: "700", display: "block", lineHeight: "1" })}>82+</span>
+            <span className={css({ fontSize: "13px", color: "#888", fontWeight: "500" })}>New Service <br/> on here</span>
           </div>
 
-          {/* Person Image */}
+          {/* The Person (spills out of the box) */}
           <img 
-            src="/person-holding-laptop.png" // Replace with your actual transparent PNG
-            alt="Consultant"
+            src="/person.png" // Use a transparent background image
+            alt="Business Woman"
             className={css({
               position: "relative",
-              zIndex: 1,
-              maxW: "110%",
-              ml: "-5%",
-              display: "block"
+              zIndex: 5,
+              height: "100%",
+              width: "auto",
+              objectFit: "contain",
+              margin: "0 auto",
             })}
           />
 
-          {/* Floating Info Pill at Bottom */}
+          {/* Bottom Data Pill */}
           <div className={css({
             position: "absolute",
             bottom: "30px",
@@ -149,40 +172,43 @@ export default function HeroSectionHome() {
             transform: "translateX(-50%)",
             bg: "#00E699",
             color: "black",
-            p: "24px",
-            borderRadius: "24px",
-            zIndex: 3,
+            py: "20px",
+            px: "40px",
+            borderRadius: "28px",
+            zIndex: 20,
             display: "flex",
-            gap: "40px",
-            minW: "max-content",
-            boxShadow: "0 20px 40px rgba(0,0,0,0.4)"
+            alignItems: "center",
+            gap: "30px",
+            boxShadow: "0 20px 50px rgba(0, 230, 153, 0.2)",
+            whiteSpace: "nowrap"
           })}>
-            <div>
-              <div className={css({ fontWeight: "600", fontSize: "14px" })}>Manufacturer</div>
-              <div className={css({ fontSize: "13px", opacity: 0.8 })}>Industrial Strategy</div>
+            <div className={stack({ gap: "0" })}>
+              <span className={css({ fontWeight: "700", fontSize: "15px" })}>Manufacturer</span>
+              <span className={css({ fontSize: "13px", opacity: 0.7 })}>Industrial Strategy</span>
             </div>
-            <div className={css({ w: "1px", bg: "black", opacity: 0.1 })} />
-            <div>
-              <div className={css({ fontWeight: "600", fontSize: "14px" })}>Agency Partner</div>
-              <div className={css({ fontSize: "13px", opacity: 0.8 })}>Production Market</div>
+            <div className={css({ w: "1.5px", h: "30px", bg: "black", opacity: 0.1 })} />
+            <div className={stack({ gap: "0" })}>
+              <span className={css({ fontWeight: "700", fontSize: "15px" })}>Agency Partner</span>
+              <span className={css({ fontSize: "13px", opacity: 0.7 })}>Production Market</span>
             </div>
           </div>
 
-          {/* Scroll Down Arrow */}
+          {/* Scroll Icon */}
           <div className={css({
             position: "absolute",
-            bottom: "100px",
-            right: "20px",
+            bottom: "120px",
+            right: "30px",
             bg: "#00E699",
-            p: "10px",
+            w: "44px", h: "44px",
+            display: "flex", align: "center", justify: "center",
             borderRadius: "full",
             color: "black",
-            zIndex: 2
+            zIndex: 10,
+            boxShadow: "0 10px 20px rgba(0,0,0,0.3)"
           })}>
-            ↓
+            <span className={css({ transform: "rotate(0deg)", fontWeight: "bold" })}>↓</span>
           </div>
         </div>
-
       </div>
     </section>
   );
