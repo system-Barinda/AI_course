@@ -20,7 +20,7 @@ export default function InteractiveSection() {
       className={css({
         py: "80px",
         px: "20px",
-        bg: "gray.100",
+        bg: 'linear-gradient(135deg, #000000 0%, #0a2a22 50%, #0d483a 100%)',
       })}
     >
       {/* Title */}
