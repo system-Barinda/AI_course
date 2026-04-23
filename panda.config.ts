@@ -94,7 +94,19 @@ export default defineConfig({
       },
     },
   },
-
+  theme: {
+    extend: {
+      tokens: {
+        colors: {
+          primary: { value: '#ffd93d' },
+          secondary: { value: '#ff6b6b' },
+        },
+        fonts: {
+          body: { value: 'system-ui, -apple-system, sans-serif' },
+        },
+      },
+    },
+  },
 
   // 3. Output Directory
   outdir: 'styled-system'

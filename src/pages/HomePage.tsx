@@ -3,6 +3,7 @@ import { flex, stack, container } from '../../styled-system/patterns';
 import image1 from "../../public/im1.png"
 import InteractiveSection from "../components/home/InteractiveSection"
 import HeroSectionHome from '../components/home/HeroSectionHome';
+import DanceStudio from '../components/home/DanceStudio';
 
 export default function HomePage() {
   return (
@@ -96,5 +97,6 @@ export default function HomePage() {
     
     <InteractiveSection />
     <HeroSectionHome />
+    <DanceStudio />
   </>);
 }
