@@ -1,14 +1,15 @@
 // DanceStudio.tsx
+
+import { css } from "../../../styled-system/css";
 import {
-  Container,
-  Stack,
-  Heading,
+  Flex,
   Text,
   Button,
-  Flex,
+  Container,
   Grid,
+  Stack,
+  Heading,
 } from "../../../styled-system/jsx";
-import { css } from "../../../styled-system/css";
 
 const DanceStudio = () => {
   return (
@@ -163,7 +164,7 @@ const DanceStudio = () => {
             </Flex>
           </Stack>
 
-          {/* RIGHT VISUAL */}
+          {/* RIGHT */}
           <Flex justify="center">
             <div
               className={css({
