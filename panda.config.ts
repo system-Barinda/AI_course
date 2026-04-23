@@ -4,108 +4,66 @@ export default defineConfig({
   // 1. Core Settings
   preflight: true,
   jsxFramework: 'react',
-  
-  // This MUST be inside the defineConfig object
+
   include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
 
-  // 2. Custom Design Tokens
+  // 2. Theme (MERGED — only one theme block ✅)
   theme: {
     extend: {
       tokens: {
         colors: {
+          // ── BRAND ──
           brand: {
             dark: { value: '#061311' },
             teal: { value: '#0f3a2e' },
             glass: { value: 'rgba(255, 255, 255, 0.1)' }
-          }
-        },
-        fonts: {
-          body: { value: 'var(--font-sans), system-ui, sans-serif' }
-        }
-      }
-    }
-  },
+          },
 
-  //3.custom desing tokens
-
-
-  theme: {
-    extend: {
-      tokens: {
-        colors: {
-          // New tokens for the "Step by Step" layout
+          // ── ABOUT SECTION ──
           about: {
-            bg: { value: '#F7F7F7' }, // Soft off-white background
-            text: { value: '#2C3E50' }, // Dark charcoal for main headings
-            card: { value: '#0A2A22' }, // Deep teal/green for the cards
-            subtleCard: { value: '#E1E1E1' }, // Light gray for the left-side sub-card
-            circle: { value: '#F0F0F0' }, // Light gray for the circles
+            bg: { value: '#F7F7F7' },
+            text: { value: '#2C3E50' },
+            card: { value: '#0A2A22' },
+            subtleCard: { value: '#E1E1E1' },
+            circle: { value: '#F0F0F0' },
           },
-        },
-        fonts: {
-          // Assume var(--font-inter) is defined in your main layout
-          body: { value: 'var(--font-inter), system-ui, sans-serif' },
-        },
-      },
-    },
-  },
 
-  theme: {
-    extend: {
-      tokens: {
-        colors: {
+          // ── LEARN SECTION ──
           learn: {
-            bg: { value: '#FFFFFF' }, // Clean white background for the text section
-            title: { value: '#2C3E50' }, // Dark charcoal for the "Learn to Make" title
-            card: { value: '#10352A' }, // Rich green base for the dark cards
-            circle: { value: '#E1E1E1' }, // Light gray for the dots
+            bg: { value: '#FFFFFF' },
+            title: { value: '#2C3E50' },
+            card: { value: '#10352A' },
+            circle: { value: '#E1E1E1' },
           },
-        },
-        fonts: {
-          // Assume var(--font-inter) is defined globally
-          body: { value: 'var(--font-inter), system-ui, sans-serif' },
-        },
-      },
-    },
-  },
-  
 
-
-  theme: {
-    extend: {
-      tokens: {
-        colors: {
+          // ── EXPERT SECTION ──
           expert: {
-            bgGradient: { value: 'linear-gradient(135deg, #f8f9fa 0%, #e0e6ed 100%)' }, // Light, smooth background gradient
-            textCharcoal: { value: '#1a202c' }, // Dark charcoal for headings and body text
-            aiChat: {
-              gradient: { value: 'linear-gradient(135deg, #103a2e 0%, #061311 100%)' }, // Dark green for AI panel
-              userBubble: { value: 'rgba(255, 255, 255, 0.1)' }, // Transparent light white bubble
-              userText: { value: '#cbd5f5' } // Pale blue-white text
+            bgGradient: {
+              value: 'linear-gradient(135deg, #f8f9fa 0%, #e0e6ed 100%)'
             },
-            input: { value: '#2d3748' }, // Dark input field
+            textCharcoal: { value: '#1a202c' },
+            aiChat: {
+              gradient: {
+                value: 'linear-gradient(135deg, #103a2e 0%, #061311 100%)'
+              },
+              userBubble: { value: 'rgba(255, 255, 255, 0.1)' },
+              userText: { value: '#cbd5f5' }
+            },
+            input: { value: '#2d3748' },
           },
-        },
-        fonts: {
-          // Assume var(--font-inter) is defined globally
-          body: { value: 'var(--font-inter), system-ui, sans-serif' },
-        },
-      },
-    },
-  },
-  theme: {
-    extend: {
-      tokens: {
-        colors: {
+
+          // ── GLOBAL COLORS ──
           primary: { value: '#ffd93d' },
           secondary: { value: '#ff6b6b' },
         },
+
+        // ── FONTS ──
         fonts: {
-          body: { value: 'system-ui, -apple-system, sans-serif' },
-        },
-      },
-    },
+          body: { value: 'var(--font-inter), system-ui, sans-serif' }
+        }
+      }
+    }
   },
 
   // 3. Output Directory
