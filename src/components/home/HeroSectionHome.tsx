@@ -6,7 +6,7 @@ export default function HeroSectionHome() {
     <section
       className={css({
         minH: "100vh",
-        bg: "black",
+         bg: 'linear-gradient(165deg, #01130f 60%, #0e4235 50%)',
         color: "white",
         px: { base: "20px", md: "40px", lg: "80px" },
         pt: { base: "16px", lg: "24px" },
