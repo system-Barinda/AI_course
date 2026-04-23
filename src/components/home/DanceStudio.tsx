@@ -7,8 +7,8 @@ import {
   Button,
   Flex,
   Grid,
-} from "../../styled-system/jsx";
-import { css } from "../../styled-system/css";
+} from "../../../styled-system/jsx";
+import { css } from "../../../styled-system/css";
 
 const DanceStudio = () => {
   return (
