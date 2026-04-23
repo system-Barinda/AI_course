@@ -1,22 +1,13 @@
 // DanceStudio.tsx
 
 import { css } from "../../../styled-system/css";
-import {
-  Flex,
-  Text,
-  Button,
-  Container,
-  Grid,
-  Stack,
-  Heading,
-} from "../../../styled-system/jsx";
 
 const DanceStudio = () => {
   return (
     <div
       className={css({
         minH: "100vh",
-        bg: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)",
+        bg: "linear-gradient(135deg, #364d46 0%, #1a1a2e 100%)",
         position: "relative",
         overflowX: "hidden",
       })}
@@ -34,175 +25,157 @@ const DanceStudio = () => {
         })}
       />
 
-      {/* NAVBAR */}
-      <nav
-        className={css({
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-          py: { base: 4, md: 6 },
-          px: { base: 4, md: 8, lg: 12 },
-          backdropFilter: "blur(10px)",
-          bg: "rgba(0,0,0,0.3)",
-          borderBottom: "1px solid rgba(255,255,255,0.1)",
-        })}
-      >
-        <Flex justify="space-between" align="center" maxW="1400px" mx="auto">
-          <Text
-            fontSize={{ base: "2xl", md: "3xl" }}
-            fontWeight="bold"
-            className={css({
-              background: "linear-gradient(90deg, #ff6b6b, #ffd93d)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            })}
-          >
-            DANCE STUDIO
-          </Text>
-
-          <Flex gap={{ base: 4, md: 8 }} display={{ base: "none", md: "flex" }}>
-            {["ABOUT", "SCHEDULE", "ARTIST", "LOCAL"].map((item) => (
-              <Text
-                key={item}
-                fontSize="sm"
-                cursor="pointer"
-                className={css({
-                  _hover: { color: "#ffd93d" },
-                })}
-              >
-                {item}
-              </Text>
-            ))}
-          </Flex>
-
-          <Button
-            size="sm"
-            variant="outline"
-            className={css({
-              borderColor: "#ffd93d",
-              color: "#ffd93d",
-              _hover: { bg: "#ffd93d", color: "#000" },
-            })}
-          >
-            MENU
-          </Button>
-        </Flex>
-      </nav>
 
       {/* MAIN CONTENT */}
-      <Container
-        maxW="1400px"
-        mx="auto"
-        px={{ base: 4, md: 6, lg: 8 }}
-        pt={{ base: 24, md: 32, lg: 40 }}
+      <div
+        className={css({
+          maxW: "1400px",
+          mx: "auto",
+          px: "24px",
+          pt: "140px",
+        })}
       >
-        <Grid
-          templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
-          gap={{ base: 8, lg: 12 }}
-          alignItems="center"
+        <div
+          className={css({
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "40px",
+            alignItems: "center",
+          })}
         >
           {/* LEFT */}
-          <Stack gap={{ base: 4, md: 6 }}>
-            <Text color="#ffd93d" fontWeight="semibold">
+          <div
+            className={css({
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            })}
+          >
+            <p className={css({ color: "#ffd93d", fontWeight: "600" })}>
               AFROBEAT DANCE
-            </Text>
+            </p>
 
-            <Heading
-              fontSize={{ base: "5xl", md: "7xl", lg: "8xl" }}
-              lineHeight="1.1"
+            <h1
+              className={css({
+                fontSize: "60px",
+                lineHeight: "1.1",
+                fontWeight: "bold",
+              })}
             >
               AfeN Wahid
-            </Heading>
+            </h1>
 
-            <Text color="gray.400" maxW="600px">
+            <p
+              className={css({
+                color: "#aaa",
+                maxW: "600px",
+              })}
+            >
               Discover rhythm, movement, and culture through dance. Join a
               community of passionate learners and grow your talent.
-            </Text>
+            </p>
 
             {/* STATS */}
-            <Flex gap={{ base: 6, md: 8 }}>
-              <Stack>
-                <Heading color="#ffd93d">300+</Heading>
-                <Text fontSize="sm" color="gray.500">
+            <div
+              className={css({
+                display: "flex",
+                gap: "30px",
+                alignItems: "center",
+              })}
+            >
+              <div>
+                <h2 className={css({ color: "#ffd93d", fontSize: "28px" })}>
+                  300+
+                </h2>
+                <p className={css({ fontSize: "12px", color: "#777" })}>
                   Nights/show
-                </Text>
-              </Stack>
+                </p>
+              </div>
 
-              <Stack>
-                <Heading color="#ffd93d">120K+</Heading>
-                <Text fontSize="sm" color="gray.500">
+              <div>
+                <h2 className={css({ color: "#ffd93d", fontSize: "28px" })}>
+                  120K+
+                </h2>
+                <p className={css({ fontSize: "12px", color: "#777" })}>
                   Students
-                </Text>
-              </Stack>
+                </p>
+              </div>
 
-              <Button
-                variant="ghost"
+              <button
                 className={css({
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: "10px",
+                  cursor: "pointer",
                   _hover: { color: "#ffd93d" },
                 })}
               >
                 <div
                   className={css({
-                    w: 10,
-                    h: 10,
-                    borderRadius: "full",
-                    bg: "#ffd93d",
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "#ffd93d",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    color: "#000",
                   })}
                 >
                   ▶
                 </div>
                 Watch
-              </Button>
-            </Flex>
-          </Stack>
+              </button>
+            </div>
+          </div>
 
           {/* RIGHT */}
-          <Flex justify="center">
+          <div
+            className={css({
+              display: "flex",
+              justifyContent: "center",
+            })}
+          >
             <div
               className={css({
-                w: "300px",
-                h: "300px",
-                bg: "linear-gradient(135deg, #ff6b6b, #ffd93d)",
-                borderRadius: "full",
+                width: "300px",
+                height: "300px",
+                background: "linear-gradient(135deg, #ff6b6b, #ffd93d)",
+                borderRadius: "50%",
                 opacity: 0.7,
               })}
             />
-          </Flex>
-        </Grid>
+          </div>
+        </div>
 
         {/* FOOTER */}
-        <Flex
-          justify="space-between"
-          align="center"
-          mt={20}
-          pt={6}
-          borderTop="1px solid rgba(255,255,255,0.1)"
+        <div
+          className={css({
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "80px",
+            paddingTop: "20px",
+            borderTop: "1px solid rgba(255,255,255,0.1)",
+          })}
         >
-          <Text fontWeight="bold">DANCE STUDIO</Text>
+          <p className={css({ fontWeight: "bold" })}>DANCE STUDIO</p>
 
-          <Flex gap={4}>
+          <div className={css({ display: "flex", gap: "20px" })}>
             {["Instagram", "Twitter", "YouTube"].map((s) => (
-              <Text
+              <span
                 key={s}
-                cursor="pointer"
                 className={css({
+                  cursor: "pointer",
                   _hover: { color: "#ffd93d" },
                 })}
               >
                 {s}
-              </Text>
+              </span>
             ))}
-          </Flex>
-        </Flex>
-      </Container>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
