@@ -1,5 +1,5 @@
 import { css } from "../../../styled-system/css";
-// import screen from '../../../public/screen.png' 
+ 
 
 export default function HeroSection() {
   return (
@@ -122,7 +122,7 @@ export default function HeroSection() {
             <div>
               <h2 className={css({ fontSize: "3xl", fontWeight: "700" })}>35K</h2>
               <p className={css({ fontSize: "9px", fontWeight: "bold", letterSpacing: "wider", color: "rgba(255,255,255,0.5)" })}>
-                LOREM IPSUM
+                LOREM IPSUMd  barinda system
               </p>
             </div>
 

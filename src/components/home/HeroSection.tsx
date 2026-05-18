@@ -1,6 +1,6 @@
-// HeroSection.jsx
-import React from "react";
-import "./HeroSection.css";
+
+import React from "react"
+
 
 function HeroSection() {
   return (

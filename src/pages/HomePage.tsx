@@ -4,6 +4,7 @@ import { flex, stack } from '../../styled-system/patterns';
 import InteractiveSection from "../components/home/InteractiveSection";
 import HeroSectionHome from '../components/home/HeroSectionHome';
 import DanceStudio from '../components/home/DanceStudio';
+import HeroSection from '../components/home/HeroSection';
 
 export default function HomePage() {
   return (
@@ -170,6 +171,7 @@ export default function HomePage() {
       <InteractiveSection />
       <HeroSectionHome />
       <DanceStudio />
+      <HeroSection />
     </>
   );
 }
