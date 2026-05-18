@@ -5,6 +5,7 @@ import InteractiveSection from "../components/home/InteractiveSection";
 import HeroSectionHome from '../components/home/HeroSectionHome';
 import DanceStudio from '../components/home/DanceStudio';
 import HeroSection from '../components/home/HeroSection';
+import FooterSection from '../components/home/FooterSection';
 
 export default function HomePage() {
   return (
@@ -172,6 +173,7 @@ export default function HomePage() {
       <HeroSectionHome />
       <DanceStudio />
       <HeroSection />
+      <FooterSection />
     </>
   );
 }
